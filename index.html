@@ -1,66 +1,624 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vidyashree M — Data Science & Artificial Intelligence portfolio.">
-  <title>Vidyashree M | Data × AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description"
+      content="Vidyashree M — Data Science & Artificial Intelligence portfolio.">
+
+<title>Vidyashree M | Data × AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+```
+
 </head>
+
 <body>
-  <div class="noise"></div>
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Vidyashree home"><span>VM</span><b>Vidyashree</b></a>
-    <nav>
-      <a href="#work">Work</a><a href="#about">About</a><a href="#skills">Stack</a><a href="#contact">Contact</a>
-    </nav>
-    <a class="status" href="#contact"><i></i> Open to opportunities</a>
-  </header>
 
-  <main id="top">
-    <section class="hero section-pad">
-      <div class="hero-copy">
-        <p class="eyebrow">DATA SCIENCE <span>×</span> ARTIFICIAL INTELLIGENCE</p>
-        <h1>I turn <em>data</em><br>into things<br>people can use.</h1>
-        <p class="intro">I'm Vidyashree — a B.Sc. (Hons) Data Science & AI student who enjoys building practical systems, exploring machine learning and turning messy data into clear ideas.</p>
-        <div class="hero-actions"><a class="btn primary" href="#work">Explore my work <span>↘</span></a><a class="text-link" href="https://github.com/vidyashreem46" target="_blank" rel="noopener">GitHub ↗</a></div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
-        <div class="core"><span>AI</span><small>DATA<br>IN / IDEAS<br>OUT</small></div>
-        <div class="node n1">PY</div><div class="node n2">ML</div><div class="node n3">CV</div><div class="node n4">SQL</div>
-        <div class="coord">12.30° N<br>76.65° E</div>
-      </div>
-    </section>
+<div class="noise"></div>
 
-    <section class="ticker"><div>PYTHON · MACHINE LEARNING · COMPUTER VISION · DATA ANALYSIS · GENERATIVE AI · SQL · PYTHON · MACHINE LEARNING · COMPUTER VISION · DATA ANALYSIS ·</div></section>
+<!-- NAVIGATION -->
 
-    <section id="work" class="section-pad work-section">
-      <div class="section-head"><div><p class="eyebrow">SELECTED WORK / 01</p><h2>Projects with a<br><em>purpose.</em></h2></div><p class="section-note">Not just demos. Each project started with a problem worth understanding.</p></div>
-      <div class="project-grid">
-        <article class="project featured"><div class="project-top"><span>01 / AI EVALUATION</span><span>DJANGO</span></div><div class="project-visual benchmark"><div class="mini-chart"><i style="height:62%"></i><i style="height:84%"></i><i style="height:48%"></i><i style="height:92%"></i><i style="height:70%"></i></div><b>AI<br>BENCH</b></div><h3>AI Chatbot<br>Benchmarking Tool</h3><p>A comparison system for evaluating chatbot responses through correctness, creativity, speed and hallucination signals.</p><div class="tags"><span>AI Evaluation</span><span>Django</span><span>Analytics</span></div></article>
-        <article class="project"><div class="project-top"><span>02 / COMPUTER VISION</span><span>PYTHON</span></div><div class="project-visual gesture"><div class="hand">✋</div><div class="scan"></div><span>GESTURE / DETECTED</span></div><h3>Hand Gesture<br>Recognition</h3><p>A focused academic computer-vision project exploring gesture classification from image data.</p><div class="tags"><span>OpenCV</span><span>ML</span><span>Vision</span></div></article>
-        <article class="project"><div class="project-top"><span>03 / MARKET DATA</span><span>PANDAS</span></div><div class="project-visual candles"><i></i><i></i><i></i><i></i><i></i><i></i><div class="price">OHLC / 15 MIN</div></div><h3>Candlestick<br>Pattern Detection</h3><p>Analysing NSE market data to identify candle structures such as Doji and derive useful trading features.</p><div class="tags"><span>Pandas</span><span>OHLC</span><span>Matplotlib</span></div></article>
-        <article class="project small"><div class="project-top"><span>04 / AUTOMATION</span><span>SELENIUM</span></div><h3>UUCMS Result<br>Automation</h3><p>Browser automation and structured extraction for a repetitive academic workflow.</p><div class="tags"><span>Selenium</span><span>Automation</span></div></article>
-        <article class="project small"><div class="project-top"><span>05 / COMPUTER VISION</span><span>PYTHON</span></div><h3>Face Recognition<br>Attendance</h3><p>Exploring computer vision for automated attendance workflows.</p><div class="tags"><span>OpenCV</span><span>Recognition</span></div></article>
-        <article class="project small"><div class="project-top"><span>06 / WEB + DB</span><span>FLASK</span></div><h3>QuizMaster</h3><p>A Flask and SQLite quiz application with registration, login and dashboard flow.</p><div class="tags"><span>Flask</span><span>SQLite</span></div></article>
-      </div>
-    </section>
+<header class="topbar">
 
-    <section id="about" class="about section-pad">
-      <div class="about-number">02</div><div class="about-copy"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Curious by default.<br><em>Builder by choice.</em></h2><p>I'm currently pursuing B.Sc. (Hons) in Data Science & Artificial Intelligence at Sarada Vilas College, Mysuru. My learning sits at the intersection of data, AI and software — from cleaning datasets to training models and turning ideas into working applications.</p><p>I like projects that make me learn something new: a new dataset, a new algorithm, a new interface or simply a better way to solve an old problem.</p><div class="facts"><div><b>01</b><span>Data → Insight</span></div><div><b>02</b><span>Model → System</span></div><div><b>03</b><span>Idea → Project</span></div></div></div>
-    </section>
+```
+<a href="#home" class="brand">
+    <span>VM</span>
+    <b>Vidyashree</b>
+</a>
 
-    <section id="skills" class="skills section-pad"><div class="section-head"><div><p class="eyebrow">TOOLS I WORK WITH / 03</p><h2>My working<br><em>stack.</em></h2></div></div><div class="skill-board"><div class="skill-column"><span>LANGUAGES</span><h3>Python</h3><h3>C</h3><h3>SQL</h3><h3>HTML / CSS / JS</h3></div><div class="skill-column"><span>DATA + ML</span><h3>Pandas</h3><h3>NumPy</h3><h3>Scikit-learn</h3><h3>Matplotlib</h3></div><div class="skill-column"><span>AI + VISION</span><h3>Neural Networks</h3><h3>Generative AI</h3><h3>OpenCV</h3><h3>EasyOCR / Tesseract</h3></div><div class="skill-column"><span>BUILD + STORE</span><h3>Django / Flask</h3><h3>SQLite / MongoDB</h3><h3>Git / GitHub</h3><h3>Power BI</h3></div></div></section>
+<nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#skills">Stack</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section class="education section-pad"><div class="edu-label"><p class="eyebrow">CURRENTLY / 04</p><span>2026</span></div><div class="edu-main"><h2>B.Sc. (Hons)<br><em>Data Science & AI</em></h2><p>Sarada Vilas College · Mysuru</p><div class="certs"><span>Oracle Cloud Infrastructure</span><span>AI Foundations Associate</span><span>MongoDB GenAI Developer</span><span>Big Data Concepts</span></div></div></section>
+<a href="#contact" class="status">
+    <i></i>
+    Open to opportunities
+</a>
+```
 
-    <section id="contact" class="contact section-pad"><p class="eyebrow">HAVE A PROJECT IN MIND? / 05</p><h2>Let's make<br>something <em>interesting.</em></h2><a class="mail" href="mailto:vidyashreem46@gmail.com">vidyashreem46@gmail.com <span>↗</span></a><div class="contact-bottom"><span>© 2026 Vidyashree M</span><div><a href="https://github.com/vidyashreem46" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/vidyashree-m-98a7641b7" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
-  </main>
-  <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
-  <script src="js/script.js"></script>
+</header>
+
+<main id="home">
+
+<!-- HERO -->
+
+<section class="hero section-pad">
+
+```
+<div class="hero-copy">
+
+    <p class="eyebrow">
+        DATA SCIENCE <span>×</span> ARTIFICIAL INTELLIGENCE
+    </p>
+
+    <h1>
+        I turn <em>data</em><br>
+        into things<br>
+        people can use.
+    </h1>
+
+    <p class="intro">
+        I'm Vidyashree — a B.Sc. (Hons) Data Science & AI student
+        who enjoys building practical systems, exploring machine
+        learning and turning messy data into clear ideas.
+    </p>
+
+    <div class="hero-actions">
+
+        <a href="#work" class="btn primary">
+            Explore my work
+            <span>↘</span>
+        </a>
+
+        <a href="https://github.com/vidyashreem46"
+           target="_blank"
+           class="text-link">
+            GitHub ↗
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- CREATIVE AI ORBIT -->
+<div class="hero-art">
+
+    <div class="orbit orbit-a"></div>
+    <div class="orbit orbit-b"></div>
+    <div class="orbit orbit-c"></div>
+
+    <div class="core">
+
+        <span>AI</span>
+
+        <small>
+            DATA<br>
+            IN / IDEAS<br>
+            OUT
+        </small>
+
+    </div>
+
+    <div class="node n1">PY</div>
+    <div class="node n2">ML</div>
+    <div class="node n3">CV</div>
+    <div class="node n4">SQL</div>
+
+    <div class="coord">
+        12.30° N<br>
+        76.65° E
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- MOVING TECHNOLOGY LINE -->
+
+<section class="ticker">
+
+```
+<div>
+    PYTHON · MACHINE LEARNING · COMPUTER VISION ·
+    DATA ANALYSIS · GENERATIVE AI · SQL ·
+    PYTHON · MACHINE LEARNING · COMPUTER VISION ·
+    DATA ANALYSIS · GENERATIVE AI · SQL ·
+</div>
+```
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="work" class="section-pad work-section">
+
+```
+<div class="section-head">
+
+    <div>
+
+        <p class="eyebrow">
+            SELECTED WORK / 01
+        </p>
+
+        <h2>
+            Projects with a<br>
+            <em>purpose.</em>
+        </h2>
+
+    </div>
+
+    <p class="section-note">
+        Not just demos. Each project started with a
+        problem worth understanding.
+    </p>
+
+</div>
+
+
+<div class="project-grid">
+
+
+    <!-- PROJECT 01 -->
+    <article class="project">
+
+        <div class="project-top">
+            <span>01 / AI EVALUATION</span>
+            <span>DJANGO</span>
+        </div>
+
+        <div class="project-visual benchmark">
+
+            <div class="mini-chart">
+                <i style="height:62%"></i>
+                <i style="height:84%"></i>
+                <i style="height:48%"></i>
+                <i style="height:92%"></i>
+                <i style="height:70%"></i>
+            </div>
+
+            <b>
+                AI<br>
+                BENCH
+            </b>
+
+        </div>
+
+        <h3>
+            AI Chatbot<br>
+            Benchmarking Tool
+        </h3>
+
+        <p>
+            A comparison system for evaluating chatbot
+            responses through correctness, creativity,
+            speed and hallucination signals.
+        </p>
+
+        <div class="tags">
+            <span>AI Evaluation</span>
+            <span>Django</span>
+            <span>Analytics</span>
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 02 -->
+    <article class="project">
+
+        <div class="project-top">
+            <span>02 / COMPUTER VISION</span>
+            <span>PYTHON</span>
+        </div>
+
+        <div class="project-visual gesture">
+
+            <div class="hand">✋</div>
+
+            <div class="scan"></div>
+
+            <span>
+                GESTURE / DETECTED
+            </span>
+
+        </div>
+
+        <h3>
+            Hand Gesture<br>
+            Recognition
+        </h3>
+
+        <p>
+            A focused academic computer-vision project
+            exploring gesture classification from image data.
+        </p>
+
+        <div class="tags">
+            <span>OpenCV</span>
+            <span>ML</span>
+            <span>Vision</span>
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 03 -->
+    <article class="project">
+
+        <div class="project-top">
+            <span>03 / MARKET DATA</span>
+            <span>PANDAS</span>
+        </div>
+
+        <div class="project-visual candles">
+
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+
+            <div class="price">
+                OHLC / 15 MIN
+            </div>
+
+        </div>
+
+        <h3>
+            Candlestick<br>
+            Pattern Detection
+        </h3>
+
+        <p>
+            Analysing NSE market data to identify candle
+            structures such as Doji and derive useful
+            trading features.
+        </p>
+
+        <div class="tags">
+            <span>Pandas</span>
+            <span>OHLC</span>
+            <span>Matplotlib</span>
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 04 -->
+    <article class="project small">
+
+        <div class="project-top">
+            <span>04 / AUTOMATION</span>
+            <span>SELENIUM</span>
+        </div>
+
+        <h3>
+            UUCMS Result<br>
+            Automation
+        </h3>
+
+        <p>
+            Browser automation and structured extraction
+            for a repetitive academic workflow.
+        </p>
+
+        <div class="tags">
+            <span>Selenium</span>
+            <span>Automation</span>
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 05 -->
+    <article class="project small">
+
+        <div class="project-top">
+            <span>05 / COMPUTER VISION</span>
+            <span>PYTHON</span>
+        </div>
+
+        <h3>
+            Face Recognition<br>
+            Attendance
+        </h3>
+
+        <p>
+            Exploring computer vision for automated
+            attendance workflows.
+        </p>
+
+        <div class="tags">
+            <span>OpenCV</span>
+            <span>Recognition</span>
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 06 -->
+    <article class="project small">
+
+        <div class="project-top">
+            <span>06 / WEB + DB</span>
+            <span>FLASK</span>
+        </div>
+
+        <h3>
+            QuizMaster
+        </h3>
+
+        <p>
+            A Flask and SQLite quiz application with
+            registration, login and dashboard flow.
+        </p>
+
+        <div class="tags">
+            <span>Flask</span>
+            <span>SQLite</span>
+        </div>
+
+    </article>
+
+</div>
+```
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about section-pad">
+
+```
+<div class="about-number">
+    02
+</div>
+
+<div class="about-copy">
+
+    <p class="eyebrow">
+        A LITTLE ABOUT ME
+    </p>
+
+    <h2>
+        Curious by default.<br>
+        <em>Builder by choice.</em>
+    </h2>
+
+    <p>
+        I'm currently pursuing B.Sc. (Hons) in Data Science &
+        Artificial Intelligence at Sarada Vilas College, Mysuru.
+        My learning sits at the intersection of data, AI and
+        software — from cleaning datasets to training models
+        and turning ideas into working applications.
+    </p>
+
+    <p>
+        I like projects that make me learn something new:
+        a new dataset, a new algorithm, a new interface or
+        simply a better way to solve an old problem.
+    </p>
+
+    <div class="facts">
+
+        <div>
+            <b>01</b>
+            <span>Data → Insight</span>
+        </div>
+
+        <div>
+            <b>02</b>
+            <span>Model → System</span>
+        </div>
+
+        <div>
+            <b>03</b>
+            <span>Idea → Project</span>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills section-pad">
+
+```
+<div class="section-head">
+
+    <div>
+
+        <p class="eyebrow">
+            TOOLS I WORK WITH / 03
+        </p>
+
+        <h2>
+            My working<br>
+            <em>stack.</em>
+        </h2>
+
+    </div>
+
+</div>
+
+
+<div class="skill-board">
+
+    <div class="skill-column">
+
+        <span>LANGUAGES</span>
+
+        <h3>Python</h3>
+        <h3>C</h3>
+        <h3>SQL</h3>
+        <h3>HTML / CSS / JS</h3>
+
+    </div>
+
+
+    <div class="skill-column">
+
+        <span>DATA + ML</span>
+
+        <h3>Pandas</h3>
+        <h3>NumPy</h3>
+        <h3>Scikit-learn</h3>
+        <h3>Matplotlib</h3>
+
+    </div>
+
+
+    <div class="skill-column">
+
+        <span>AI + VISION</span>
+
+        <h3>Neural Networks</h3>
+        <h3>Generative AI</h3>
+        <h3>OpenCV</h3>
+        <h3>EasyOCR / Tesseract</h3>
+
+    </div>
+
+
+    <div class="skill-column">
+
+        <span>BUILD + STORE</span>
+
+        <h3>Django / Flask</h3>
+        <h3>SQLite / MongoDB</h3>
+        <h3>Git / GitHub</h3>
+        <h3>Power BI</h3>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="education section-pad">
+
+```
+<div class="edu-label">
+
+    <p class="eyebrow">
+        CURRENTLY / 04
+    </p>
+
+    <span>2026</span>
+
+</div>
+
+
+<div class="edu-main">
+
+    <h2>
+        B.Sc. (Hons)<br>
+        <em>Data Science & AI</em>
+    </h2>
+
+    <p>
+        Sarada Vilas College · Mysuru
+    </p>
+
+
+    <div class="certs">
+
+        <span>Oracle Cloud Infrastructure</span>
+        <span>AI Foundations Associate</span>
+        <span>MongoDB GenAI Developer</span>
+        <span>Big Data Concepts</span>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact section-pad">
+
+```
+<div>
+
+    <p class="eyebrow">
+        HAVE A PROJECT IN MIND? / 05
+    </p>
+
+    <h2>
+        Let's make<br>
+        something <em>interesting.</em>
+    </h2>
+
+    <a href="mailto:vidyashreem46@gmail.com"
+       class="mail">
+
+        vidyashreem46@gmail.com
+        <span>↗</span>
+
+    </a>
+
+</div>
+
+
+<div class="contact-bottom">
+
+    <span>
+        © 2026 Vidyashree M
+    </span>
+
+    <div>
+
+        <a href="https://github.com/vidyashreem46"
+           target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://linkedin.com/in/vidyashree-m-98a7641b7"
+           target="_blank">
+            LinkedIn
+        </a>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+</main>
+
+<button id="topBtn" class="top-btn">
+    ↑
+</button>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
+
