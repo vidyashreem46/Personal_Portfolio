@@ -1,21 +1,47 @@
-/* ==================================================
-   VIDYASHREE M — PORTFOLIO INTERACTIONS
-   ================================================== */
+/* =========================================================
+   VIDYASHREE M — PORTFOLIO JAVASCRIPT
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ================================================
-       PROJECT FILTERING
-       ================================================ */
 
-    const filterButtons = document.querySelectorAll(".filter");
-    const projects = document.querySelectorAll(".project-card");
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+    const projectCards =
+        document.querySelectorAll(".project-card");
+
+    const topButton =
+        document.getElementById("topBtn");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const topbar =
+        document.querySelector(".topbar");
+
+    const cursorGlow =
+        document.querySelector(".cursor-glow");
+
+    const navLinks =
+        document.querySelectorAll(".topbar nav a");
+
+
+    /* =====================================================
+       PROJECT FILTERING
+    ===================================================== */
 
     filterButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            const selectedFilter = button.dataset.filter;
+            const selectedFilter =
+                button.dataset.filter;
+
 
             /* Active button */
 
@@ -26,12 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
             button.classList.add("active");
 
 
-            /* Filter projects */
+            /* Filter cards */
 
-            projects.forEach(project => {
+            projectCards.forEach(card => {
 
                 const categories =
-                    project.dataset.category.split(" ");
+                    card.dataset.category
+                        .toLowerCase()
+                        .split(" ");
+
 
                 const shouldShow =
                     selectedFilter === "all" ||
@@ -40,28 +69,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (shouldShow) {
 
-                    project.classList.remove("hidden");
+                    card.classList.remove("hidden");
 
-                    project.animate(
-                        [
-                            {
-                                opacity: 0,
-                                transform: "translateY(15px)"
-                            },
-                            {
-                                opacity: 1,
-                                transform: "translateY(0)"
-                            }
-                        ],
-                        {
-                            duration: 350,
-                            easing: "ease-out"
-                        }
-                    );
+                    requestAnimationFrame(() => {
+
+                        card.style.opacity = "0";
+                        card.style.transform =
+                            "translateY(12px)";
+
+                        requestAnimationFrame(() => {
+
+                            card.style.opacity = "1";
+                            card.style.transform =
+                                "translateY(0)";
+
+                        });
+
+                    });
 
                 } else {
 
-                    project.classList.add("hidden");
+                    card.classList.add("hidden");
 
                 }
 
@@ -72,203 +100,170 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* ================================================
-       SCROLL REVEAL
-       ================================================ */
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
-    const revealElements = document.querySelectorAll(
-        ".project, .skill-column, .experience-card, .about-copy"
-    );
+    if (menuToggle) {
 
-    const revealObserver = new IntersectionObserver(
-        entries => {
+        menuToggle.addEventListener("click", () => {
 
-            entries.forEach(entry => {
+            topbar.classList.toggle("menu-open");
 
-                if (entry.isIntersecting) {
+        });
 
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform =
-                        "translateY(0)";
+    }
 
-                    revealObserver.unobserve(entry.target);
 
+    /* Close mobile menu after navigation */
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            topbar.classList.remove("menu-open");
+
+        });
+
+    });
+
+
+    /* =====================================================
+       SMOOTH INTERNAL LINKS
+    ===================================================== */
+
+    document.querySelectorAll('a[href^="#"]')
+        .forEach(link => {
+
+            link.addEventListener("click", event => {
+
+                const targetId =
+                    link.getAttribute("href");
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+                    return;
                 }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
             });
 
-        },
-        {
-            threshold: 0.12
-        }
-    );
+        });
+
+
+    /* =====================================================
+       ACTIVE NAVIGATION
+    ===================================================== */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        const currentId =
+                            entry.target.id;
+
+                        navLinks.forEach(link => {
+
+                            link.classList.remove("active");
+
+                            if (
+                                link.getAttribute("href") ===
+                                `#${currentId}`
+                            ) {
+
+                                link.classList.add("active");
+
+                            }
+
+                        });
+
+                    }
+
+                });
+
+            },
+            {
+                rootMargin:
+                    "-30% 0px -60% 0px"
+            }
+        );
+
+
+    sections.forEach(section => {
+
+        observer.observe(section);
+
+    });
+
+
+    /* =====================================================
+       SCROLL REVEAL
+    ===================================================== */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                        revealObserver.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.1
+            }
+        );
 
 
     revealElements.forEach(element => {
-
-        element.style.opacity = "0";
-        element.style.transform = "translateY(20px)";
-        element.style.transition =
-            "opacity .7s ease, transform .7s ease";
 
         revealObserver.observe(element);
 
     });
 
 
-    /* ================================================
-       ACTIVE NAVIGATION
-       ================================================ */
-
-    const sections = document.querySelectorAll(
-        "section[id]"
-    );
-
-    const navLinks = document.querySelectorAll(
-        ".topbar nav a"
-    );
-
-    const navObserver = new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (!entry.isIntersecting) return;
-
-                const currentId =
-                    entry.target.getAttribute("id");
-
-                navLinks.forEach(link => {
-
-                    const href =
-                        link.getAttribute("href");
-
-                    link.style.opacity =
-                        href === `#${currentId}`
-                            ? "1"
-                            : "0.55";
-
-                });
-
-            });
-
-        },
-        {
-            threshold: 0.35
-        }
-    );
-
-
-    sections.forEach(section => {
-        navObserver.observe(section);
-    });
-
-
-    /* ================================================
-       MOUSE PARALLAX — HERO VISUAL
-       ================================================ */
-
-    const heroArt =
-        document.querySelector(".hero-art");
-
-    const orbits =
-        document.querySelectorAll(".orbit");
-
-    if (heroArt) {
-
-        heroArt.addEventListener(
-            "mousemove",
-            event => {
-
-                const rect =
-                    heroArt.getBoundingClientRect();
-
-                const x =
-                    (event.clientX - rect.left)
-                    / rect.width
-                    - 0.5;
-
-                const y =
-                    (event.clientY - rect.top)
-                    / rect.height
-                    - 0.5;
-
-
-                orbits.forEach((orbit, index) => {
-
-                    const movement =
-                        (index + 1) * 7;
-
-                    orbit.style.marginLeft =
-                        `${x * movement}px`;
-
-                    orbit.style.marginTop =
-                        `${y * movement}px`;
-
-                });
-
-            }
-        );
-
-
-        heroArt.addEventListener(
-            "mouseleave",
-            () => {
-
-                orbits.forEach(orbit => {
-
-                    orbit.style.marginLeft = "0";
-                    orbit.style.marginTop = "0";
-
-                });
-
-            }
-        );
-
-    }
-
-
-    /* ================================================
-       PROJECT HOVER
-       ================================================ */
-
-    projects.forEach(project => {
-
-        project.addEventListener(
-            "mouseenter",
-            () => {
-
-                if (!project.classList.contains("hidden")) {
-
-                    project.style.transform =
-                        "translateY(-5px)";
-
-                }
-
-            }
-        );
-
-
-        project.addEventListener(
-            "mouseleave",
-            () => {
-
-                project.style.transform =
-                    "translateY(0)";
-
-            }
-        );
-
-    });
-
-
-    /* ================================================
+    /* =====================================================
        BACK TO TOP
-       ================================================ */
-
-    const topButton =
-        document.getElementById("topBtn");
-
+    ===================================================== */
 
     window.addEventListener(
         "scroll",
@@ -284,64 +279,211 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
-        }
+        },
+        { passive: true }
     );
 
 
-    topButton.addEventListener(
-        "click",
-        () => {
+    if (topButton) {
+
+        topButton.addEventListener("click", () => {
 
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
 
-        }
-    );
+        });
+
+    }
 
 
-    /* ================================================
-       CURSOR-BASED BACKGROUND MOVEMENT
-       ================================================ */
+    /* =====================================================
+       CURSOR BACKGROUND INTERACTION
+    ===================================================== */
 
-    const ambient =
-        document.querySelector(".ambient");
+    if (
+        cursorGlow &&
+        window.matchMedia(
+            "(pointer: fine)"
+        ).matches
+    ) {
+
+        window.addEventListener(
+            "mousemove",
+            event => {
+
+                cursorGlow.style.left =
+                    `${event.clientX}px`;
+
+                cursorGlow.style.top =
+                    `${event.clientY}px`;
+
+            },
+            { passive: true }
+        );
+
+    }
 
 
-    document.addEventListener(
-        "mousemove",
-        event => {
+    /* =====================================================
+       PROJECT CARD HOVER EFFECT
+    ===================================================== */
 
-            if (!ambient) return;
+    projectCards.forEach(card => {
 
-            const x =
-                (event.clientX / window.innerWidth - 0.5)
-                * 20;
+        card.addEventListener(
+            "mousemove",
+            event => {
 
-            const y =
-                (event.clientY / window.innerHeight - 0.5)
-                * 20;
+                if (
+                    !window.matchMedia(
+                        "(pointer: fine)"
+                    ).matches
+                ) {
+                    return;
+                }
 
-            ambient.style.transform =
-                `translate(${x}px, ${y}px)`;
+                const rect =
+                    card.getBoundingClientRect();
 
-        }
-    );
+                const x =
+                    event.clientX - rect.left;
+
+                const y =
+                    event.clientY - rect.top;
 
 
-    /* ================================================
-       CURRENT YEAR
-       ================================================ */
+                const rotateX =
+                    ((y / rect.height) - 0.5) * -2;
 
-    const yearElements =
-        document.querySelectorAll("[data-year]");
+                const rotateY =
+                    ((x / rect.width) - 0.5) * 2;
 
-    yearElements.forEach(element => {
 
-        element.textContent =
-            new Date().getFullYear();
+                card.style.transform =
+                    `perspective(900px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)`;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+                card.style.transform =
+                    "perspective(900px) rotateX(0) rotateY(0)";
+
+            }
+        );
 
     });
+
+
+    /* =====================================================
+       HERO ORBIT PARALLAX
+    ===================================================== */
+
+    const heroVisual =
+        document.querySelector(".hero-visual");
+
+
+    if (
+        heroVisual &&
+        window.matchMedia(
+            "(pointer: fine)"
+        ).matches
+    ) {
+
+        heroVisual.addEventListener(
+            "mousemove",
+            event => {
+
+                const rect =
+                    heroVisual.getBoundingClientRect();
+
+                const x =
+                    (event.clientX - rect.left) /
+                    rect.width - 0.5;
+
+                const y =
+                    (event.clientY - rect.top) /
+                    rect.height - 0.5;
+
+
+                const orbits =
+                    heroVisual.querySelectorAll(
+                        ".visual-orbit"
+                    );
+
+
+                orbits.forEach(
+                    (orbit, index) => {
+
+                        const strength =
+                            (index + 1) * 7;
+
+                        orbit.style.transform =
+                            `translate(
+                                ${x * strength}px,
+                                ${y * strength}px
+                            )
+                            rotate(${index * 15 - 20}deg)`;
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       RESUME CHECK
+    ===================================================== */
+
+    const resumeLink =
+        document.querySelector(
+            'a[href="assets/resume.pdf"]'
+        );
+
+
+    if (resumeLink) {
+
+        resumeLink.addEventListener(
+            "click",
+            () => {
+
+                console.log(
+                    "Opening resume..."
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       INITIAL STATE
+    ===================================================== */
+
+    document.querySelectorAll(".reveal")
+        .forEach(element => {
+
+            if (
+                element.getBoundingClientRect().top <
+                window.innerHeight
+            ) {
+
+                element.classList.add("visible");
+
+            }
+
+        });
 
 });
