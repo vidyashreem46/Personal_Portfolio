@@ -1,78 +1,52 @@
-/* =========================================================
-   VIDYASHREE M — PORTFOLIO JAVASCRIPT
-========================================================= */
+/* =====================================================
+   PORTFOLIO JAVASCRIPT
+===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    /* =====================================================
+    /* =================================================
        PROJECT FILTER
-    ===================================================== */
+    ================================================= */
 
-    const filterButtons =
-        document.querySelectorAll(".filter-button");
-
-    const projectCards =
-        document.querySelectorAll(".project-card");
+    const filters = document.querySelectorAll(".filter");
+    const projects = document.querySelectorAll(".project-card");
 
 
-    filterButtons.forEach(button => {
+    filters.forEach(filter => {
 
-        button.addEventListener("click", () => {
+        filter.addEventListener("click", () => {
 
-            const selectedFilter =
-                button.dataset.filter;
+            const selected = filter.dataset.filter;
 
 
-            /* Remove active state */
+            /* Active button */
 
-            filterButtons.forEach(btn => {
+            filters.forEach(btn => {
                 btn.classList.remove("active");
             });
 
-
-            /* Add active state */
-
-            button.classList.add("active");
+            filter.classList.add("active");
 
 
             /* Filter projects */
 
-            projectCards.forEach(card => {
+            projects.forEach(project => {
 
                 const categories =
-                    card.dataset.category
-                        .toLowerCase()
-                        .split(" ");
+                    project.dataset.category.split(" ");
 
 
                 if (
-                    selectedFilter === "all" ||
-                    categories.includes(selectedFilter)
+                    selected === "all" ||
+                    categories.includes(selected)
                 ) {
 
-                    card.classList.remove("hidden");
-
-                    card.animate(
-                        [
-                            {
-                                opacity: 0,
-                                transform: "translateY(15px)"
-                            },
-                            {
-                                opacity: 1,
-                                transform: "translateY(0)"
-                            }
-                        ],
-                        {
-                            duration: 350,
-                            easing: "ease-out"
-                        }
-                    );
+                    project.classList.remove("hidden");
 
                 } else {
 
-                    card.classList.add("hidden");
+                    project.classList.add("hidden");
 
                 }
 
@@ -83,15 +57,50 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =====================================================
-       NAV ACTIVE SECTION
-    ===================================================== */
+
+    /* =================================================
+       BACK TO TOP
+    ================================================= */
+
+    const topButton =
+        document.getElementById("topButton");
+
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+
+            topButton.classList.add("show");
+
+        } else {
+
+            topButton.classList.remove("show");
+
+        }
+
+    });
+
+
+    topButton.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+
+    /* =================================================
+       NAVIGATION ACTIVE STATE
+    ================================================= */
 
     const sections =
         document.querySelectorAll("section[id]");
 
     const navLinks =
-        document.querySelectorAll(".nav-links a");
+        document.querySelectorAll(".navbar nav a");
 
 
     const observer =
@@ -102,21 +111,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     if (entry.isIntersecting) {
 
-                        const currentId =
-                            entry.target.getAttribute("id");
-
-
                         navLinks.forEach(link => {
 
-                            link.classList.remove("active");
-
+                            link.classList.remove("current");
 
                             if (
                                 link.getAttribute("href") ===
-                                `#${currentId}`
+                                "#" + entry.target.id
                             ) {
 
-                                link.classList.add("active");
+                                link.classList.add("current");
 
                             }
 
@@ -140,240 +144,111 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =====================================================
-       BACK TO TOP
-    ===================================================== */
 
-    const backToTop =
-        document.getElementById("backToTop");
+    /* =================================================
+       PROJECT CARD HOVER
+    ================================================= */
 
+    projects.forEach(project => {
 
-    window.addEventListener("scroll", () => {
+        project.addEventListener("mouseenter", () => {
 
-        if (window.scrollY > 500) {
+            project.style.transform =
+                "translateY(-4px)";
 
-            backToTop.classList.add("show");
+            project.style.transition =
+                "transform .3s ease";
 
-        } else {
-
-            backToTop.classList.remove("show");
-
-        }
-
-    });
+        });
 
 
-    backToTop.addEventListener("click", () => {
+        project.addEventListener("mouseleave", () => {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            project.style.transform =
+                "translateY(0)";
+
         });
 
     });
 
 
-    /* =====================================================
-       THEME BUTTON
-    ===================================================== */
 
-    const themeButton =
-        document.getElementById("themeButton");
+    /* =================================================
+       SMOOTH INTERNAL LINKS
+    ================================================= */
+
+    document.querySelectorAll(
+        'a[href^="#"]'
+    ).forEach(link => {
+
+        link.addEventListener("click", event => {
+
+            const target =
+                document.querySelector(
+                    link.getAttribute("href")
+                );
 
 
-    const themeIcon =
-        themeButton.querySelector("i");
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    });
 
 
-    const savedTheme =
-        localStorage.getItem("portfolio-theme");
+
+    /* =================================================
+       MOUSE PARALLAX FOR HERO
+    ================================================= */
+
+    const heroVisual =
+        document.querySelector(".hero-right");
 
 
-    if (savedTheme === "light") {
+    if (heroVisual) {
 
-        document.body.classList.add("light");
+        document.addEventListener(
+            "mousemove",
+            event => {
 
-        themeIcon.className =
-            "fa-solid fa-sun";
+                const x =
+                    (event.clientX /
+                        window.innerWidth - .5) * 10;
+
+                const y =
+                    (event.clientY /
+                        window.innerHeight - .5) * 10;
+
+
+                heroVisual.style.transform =
+                    `translate(${x}px, ${y}px)`;
+
+            }
+        );
 
     }
 
 
-    themeButton.addEventListener("click", () => {
 
-        document.body.classList.toggle("light");
-
-
-        const isLight =
-            document.body.classList.contains("light");
-
-
-        localStorage.setItem(
-            "portfolio-theme",
-            isLight ? "light" : "dark"
-        );
-
-
-        themeIcon.className =
-            isLight
-                ? "fa-solid fa-sun"
-                : "fa-solid fa-moon";
-
-    });
-
-
-    /* =====================================================
-       SMOOTH NAVIGATION
-    ===================================================== */
-
-    document.querySelectorAll(
-        'a[href^="#"]'
-    ).forEach(anchor => {
-
-        anchor.addEventListener("click", event => {
-
-            const targetId =
-                anchor.getAttribute("href");
-
-
-            if (
-                targetId === "#" ||
-                !document.querySelector(targetId)
-            ) {
-                return;
-            }
-
-
-            event.preventDefault();
-
-
-            const target =
-                document.querySelector(targetId);
-
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    });
-
-
-    /* =====================================================
-       HERO DATA NODE ANIMATION
-    ===================================================== */
-
-    const nodes =
-        document.querySelectorAll(".data-node");
-
-
-    nodes.forEach((node, index) => {
-
-        node.animate(
-            [
-                {
-                    transform: "translateY(0)"
-                },
-                {
-                    transform:
-                        "translateY(-10px)"
-                },
-                {
-                    transform: "translateY(0)"
-                }
-            ],
-            {
-                duration:
-                    3500 + index * 500,
-
-                iterations: Infinity,
-
-                easing: "ease-in-out"
-            }
-        );
-
-    });
-
-
-    /* =====================================================
-       PROJECT CARD MOUSE EFFECT
-    ===================================================== */
-
-    projectCards.forEach(card => {
-
-        card.addEventListener(
-            "mousemove",
-            event => {
-
-                if (window.innerWidth < 900) {
-                    return;
-                }
-
-
-                const rect =
-                    card.getBoundingClientRect();
-
-
-                const x =
-                    event.clientX - rect.left;
-
-                const y =
-                    event.clientY - rect.top;
-
-
-                const centerX =
-                    rect.width / 2;
-
-                const centerY =
-                    rect.height / 2;
-
-
-                const rotateX =
-                    (y - centerY) / 45;
-
-                const rotateY =
-                    (centerX - x) / 45;
-
-
-                card.style.transform =
-                    `perspective(900px)
-                     rotateX(${rotateX}deg)
-                     rotateY(${rotateY}deg)
-                     translateY(-7px)`;
-
-            }
-        );
-
-
-        card.addEventListener(
-            "mouseleave",
-            () => {
-
-                card.style.transform = "";
-
-            }
-        );
-
-    });
-
-
-    /* =====================================================
+    /* =================================================
        CONSOLE MESSAGE
-    ===================================================== */
+    ================================================= */
 
     console.log(
-        "%c Vidyashree M ",
-        "background:#7c3aed;color:white;padding:8px;font-weight:bold;"
+        "%c Vidyashree M — Portfolio ",
+        "background:#171817;color:#b9d75e;padding:8px;font-weight:bold;"
     );
 
     console.log(
-        "Data Science & Artificial Intelligence Portfolio"
-    );
-
-    console.log(
-        "Keep Building. 🚀"
+        "Data Science • Artificial Intelligence • Python • AI/ML"
     );
 
 });
