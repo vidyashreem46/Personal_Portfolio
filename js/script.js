@@ -1,2239 +1,816 @@
-/* =====================================================
-   ROOT
-===================================================== */
+/* =========================================================
+   VIDYASHREE M — PORTFOLIO JAVASCRIPT
+========================================================= */
 
-:root {
 
-    --bg: #08090d;
-    --bg-soft: #0d0f15;
-    --card: rgba(18, 20, 28, 0.72);
+/* =========================================================
+   PROJECT DATA
+========================================================= */
 
-    --text: #f2f3f5;
-    --text-soft: #a7abb7;
-    --text-muted: #686d79;
+const projects = [
 
-    --accent: #8b7cff;
-    --accent-soft: #b4adff;
+    {
+        title: "AI Chatbot Benchmarking Tool",
 
-    --border: rgba(255,255,255,0.09);
+        description:
+            "A benchmarking platform for comparing AI chatbot responses using correctness, creativity, speed and hallucination-related evaluation.",
 
-    --green: #7ee2a8;
-    --blue: #82aaff;
-    --yellow: #e7c875;
-    --purple: #c792ea;
+        categories: [
+            "python",
+            "ai",
+            "web",
+            "data"
+        ],
 
-    --mono: "DM Mono", monospace;
-    --sans: "Inter", sans-serif;
+        tags: [
+            "Python",
+            "Django",
+            "AI",
+            "Benchmarking"
+        ],
 
-    --max-width: 1200px;
-}
+        icon: "fa-solid fa-brain",
 
+        repo:
+            "https://github.com/vidyashreem46/AI-Chatbot-Benchmarking-Tool"
+    },
 
-/* =====================================================
-   RESET
-===================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    {
+        title: "UUCMS Result Automation",
 
-html {
-    scroll-behavior: smooth;
-}
+        description:
+            "A browser automation project created to automate interaction with the UUCMS result portal.",
 
-body {
+        categories: [
+            "python",
+            "automation"
+        ],
 
-    background: var(--bg);
+        tags: [
+            "Python",
+            "Selenium",
+            "Automation"
+        ],
 
-    color: var(--text);
+        icon: "fa-solid fa-robot",
 
-    font-family: var(--sans);
+        repo:
+            "https://github.com/vidyashreem46/uucms-result-automation"
+    },
 
-    line-height: 1.6;
 
-    overflow-x: hidden;
-}
+    {
+        title: "Data Dashboard",
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+        description:
+            "A data-focused dashboard project for presenting and exploring information through visual interfaces.",
 
-button {
-    font-family: inherit;
-}
+        categories: [
+            "python",
+            "data",
+            "web"
+        ],
 
-::selection {
-    background: var(--accent);
-    color: white;
-}
+        tags: [
+            "Python",
+            "Data",
+            "Dashboard"
+        ],
 
+        icon: "fa-solid fa-chart-line",
 
-/* =====================================================
-   BACKGROUND
-===================================================== */
+        repo:
+            "https://github.com/vidyashreem46/data_dashboard"
+    },
 
-.background-grid {
 
-    position: fixed;
+    {
+        title: "Python BankIt",
 
-    inset: 0;
+        description:
+            "A Python-based banking application with a dashboard interface for banking-related operations.",
 
-    z-index: -5;
+        categories: [
+            "python",
+            "web"
+        ],
 
-    opacity: .28;
+        tags: [
+            "Python",
+            "HTML",
+            "Application"
+        ],
 
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        );
+        icon: "fa-solid fa-building-columns",
 
-    background-size: 60px 60px;
+        repo:
+            "https://github.com/vidyashreem46/python_bank"
+    },
 
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black,
-            transparent 85%
-        );
-}
 
-.orb {
+    {
+        title: "Spam Email Detection",
 
-    position: fixed;
+        description:
+            "A machine-learning oriented project focused on identifying spam email messages.",
 
-    width: 450px;
-    height: 450px;
+        categories: [
+            "python",
+            "ai"
+        ],
 
-    border-radius: 50%;
+        tags: [
+            "Python",
+            "Machine Learning",
+            "NLP"
+        ],
 
-    filter: blur(120px);
+        icon: "fa-solid fa-envelope",
 
-    opacity: .09;
+        repo:
+            "https://github.com/vidyashreem46/spam_email_detection"
+    },
 
-    z-index: -4;
 
-    pointer-events: none;
-}
+    {
+        title: "Password Generator",
 
-.orb-one {
+        description:
+            "A programming project for generating passwords using customizable generation logic.",
 
-    background: #7667ff;
+        categories: [
+            "python"
+        ],
 
-    top: -200px;
-    right: -150px;
-}
+        tags: [
+            "Python"
+        ],
 
-.orb-two {
+        icon: "fa-solid fa-key",
 
-    background: #5f8dff;
+        repo:
+            "https://github.com/vidyashreem46/password._.generator"
+    },
 
-    bottom: -200px;
-    left: -180px;
-}
 
-.noise {
+    {
+        title: "Library Book Management System",
 
-    position: fixed;
+        description:
+            "A C programming project for managing library book-related operations.",
 
-    inset: 0;
+        categories: [
+            "c"
+        ],
 
-    z-index: 100;
+        tags: [
+            "C",
+            "Management System"
+        ],
 
-    pointer-events: none;
+        icon: "fa-solid fa-book",
 
-    opacity: .025;
+        repo:
+            "https://github.com/vidyashreem46/Library-book-Managment-in-C"
+    },
 
-    background-image:
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-}
 
+    {
+        title: "Bank Management System",
 
-/* =====================================================
-   NAVBAR
-===================================================== */
+        description:
+            "A C-based management system focused on banking operations.",
 
-.navbar {
+        categories: [
+            "c"
+        ],
 
-    position: fixed;
+        tags: [
+            "C",
+            "Management System"
+        ],
 
-    top: 0;
+        icon: "fa-solid fa-landmark",
 
-    left: 50%;
+        repo:
+            "https://github.com/vidyashreem46/Bank-Managment-System-C"
+    },
 
-    transform: translateX(-50%);
 
-    width: min(
-        calc(100% - 40px),
-        1200px
-    );
+    {
+        title: "Matrix Operations",
 
-    height: 74px;
+        description:
+            "A C programming project implementing matrix-related operations.",
 
-    margin-top: 18px;
+        categories: [
+            "c"
+        ],
 
-    padding: 0 22px;
+        tags: [
+            "C",
+            "Matrix"
+        ],
 
-    display: flex;
+        icon: "fa-solid fa-table-cells",
 
-    align-items: center;
+        repo:
+            "https://github.com/vidyashreem46/Matrix-Operations-in-C"
+    },
 
-    justify-content: space-between;
 
-    border: 1px solid var(--border);
+    {
+        title: "CodeAlpha Calculator",
 
-    background: rgba(8,9,13,.72);
+        description:
+            "A calculator program completed as part of the CodeAlpha virtual internship experience.",
 
-    backdrop-filter: blur(18px);
+        categories: [
+            "c"
+        ],
 
-    border-radius: 18px;
+        tags: [
+            "C",
+            "CodeAlpha",
+            "Internship"
+        ],
 
-    z-index: 999;
-}
+        icon: "fa-solid fa-calculator",
 
-.logo {
+        repo:
+            "https://github.com/vidyashreem46/Codealpha_Calculator_Program"
+    },
 
-    font-family: var(--mono);
 
-    font-weight: 500;
+    {
+        title: "Heap Data Structure",
 
-    font-size: 18px;
+        description:
+            "A programming repository focused on implementing and working with heap data structures.",
 
-    letter-spacing: -1px;
-}
+        categories: [
+            "c"
+        ],
 
-.logo-bracket {
-    color: var(--accent);
-}
+        tags: [
+            "C",
+            "Data Structures"
+        ],
 
-.nav-links {
+        icon: "fa-solid fa-diagram-project",
 
-    display: flex;
+        repo:
+            "https://github.com/vidyashreem46/Heap_Data_Structure"
+    },
 
-    gap: 28px;
-}
 
-.nav-links a {
+    {
+        title: "Student Management System",
 
-    color: var(--text-muted);
+        description:
+            "A C programming project for managing student-related information.",
 
-    font-size: 12px;
+        categories: [
+            "c"
+        ],
 
-    font-family: var(--mono);
+        tags: [
+            "C",
+            "Management System"
+        ],
 
-    transition: .25s;
-}
+        icon: "fa-solid fa-user-graduate",
 
-.nav-links a:hover,
-.nav-links a.active {
+        repo:
+            "https://github.com/vidyashreem46/Student_Managment_System"
+    },
 
-    color: var(--text);
-}
 
-.nav-connect {
+    {
+        title: "QR Code",
 
-    display: flex;
+        description:
+            "A repository containing work related to QR code generation.",
 
-    gap: 9px;
+        categories: [
+            "python",
+            "web"
+        ],
 
-    align-items: center;
+        tags: [
+            "Python",
+            "QR"
+        ],
 
-    font-size: 11px;
+        icon: "fa-solid fa-qrcode",
 
-    font-family: var(--mono);
+        repo:
+            "https://github.com/vidyashreem46/qr-code"
+    },
 
-    border: 1px solid var(--border);
 
-    padding: 10px 14px;
+    {
+        title: "Feedback",
 
-    border-radius: 10px;
+        description:
+            "A web-oriented feedback project available in the GitHub portfolio.",
 
-    transition: .25s;
-}
+        categories: [
+            "web"
+        ],
 
-.nav-connect:hover {
+        tags: [
+            "Web"
+        ],
 
-    background: rgba(255,255,255,.06);
+        icon: "fa-solid fa-comment-dots",
 
-    border-color:
-        rgba(139,124,255,.5);
-}
+        repo:
+            "https://github.com/vidyashreem46/feedback"
+    },
 
-.menu-btn {
 
-    display: none;
+    {
+        title: "CareNest",
 
-    border: 0;
+        description:
+            "A larger application repository representing another part of the development work in the GitHub account.",
 
-    background: transparent;
+        categories: [
+            "web"
+        ],
 
-    color: white;
+        tags: [
+            "Application",
+            "Web"
+        ],
 
-    font-size: 20px;
-}
+        icon: "fa-solid fa-house-medical",
 
+        repo:
+            "https://github.com/vidyashreem46/CareNest"
+    },
 
-/* =====================================================
-   GENERAL
-===================================================== */
 
-.section {
+    {
+        title: "Profile Website",
 
-    width: min(
-        calc(100% - 40px),
-        var(--max-width)
-    );
+        description:
+            "A web development repository created for profile and portfolio presentation.",
 
-    margin: auto;
+        categories: [
+            "web"
+        ],
 
-    padding: 120px 0;
-}
+        tags: [
+            "HTML",
+            "CSS",
+            "Web"
+        ],
 
-.section-heading {
+        icon: "fa-solid fa-globe",
 
-    display: flex;
+        repo:
+            "https://github.com/vidyashreem46/profile-website"
+    },
 
-    gap: 30px;
 
-    margin-bottom: 70px;
-}
+    {
+        title: "vgithub.io",
 
-.section-number {
+        description:
+            "A GitHub Pages/web repository from the development work in the account.",
 
-    font-family: var(--mono);
+        categories: [
+            "web"
+        ],
 
-    font-size: 12px;
+        tags: [
+            "Web",
+            "GitHub Pages"
+        ],
 
-    color: var(--accent);
+        icon: "fa-solid fa-code",
 
-    padding-top: 9px;
-}
+        repo:
+            "https://github.com/vidyashreem46/vgithub.io"
+    },
 
-.eyebrow {
 
-    display: block;
+    {
+        title: "vidya46",
 
-    font-family: var(--mono);
+        description:
+            "A repository in the GitHub account kept as additional development work.",
 
-    font-size: 10px;
+        categories: [
+            "other"
+        ],
 
-    letter-spacing: 2px;
+        tags: [
+            "GitHub"
+        ],
 
-    color: var(--text-muted);
+        icon: "fa-brands fa-github",
 
-    margin-bottom: 14px;
-}
+        repo:
+            "https://github.com/vidyashreem46/vidya46"
+    },
 
-.section-heading h2 {
 
-    font-size: clamp(38px, 5vw, 68px);
+    {
+        title: "Student",
 
-    line-height: .95;
+        description:
+            "A repository in the GitHub account representing additional development work.",
 
-    letter-spacing: -3px;
+        categories: [
+            "other"
+        ],
 
-    font-weight: 600;
-}
+        tags: [
+            "GitHub"
+        ],
 
-.section-heading h2 span {
+        icon: "fa-solid fa-folder",
 
-    color: var(--text-muted);
-
-    font-weight: 400;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-
-    min-height: 100vh;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    align-items: center;
-
-    gap: 80px;
-
-    padding-top: 160px;
-}
-
-.status-pill {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    border: 1px solid var(--border);
-
-    background: rgba(255,255,255,.025);
-
-    padding: 8px 12px;
-
-    border-radius: 100px;
-
-    font-family: var(--mono);
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-
-    color: var(--text-muted);
-
-    margin-bottom: 28px;
-}
-
-.status-dot {
-
-    width: 6px;
-    height: 6px;
-
-    border-radius: 50%;
-
-    background: var(--green);
-
-    box-shadow:
-        0 0 12px var(--green);
-
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-
-    0%,100% {
-        opacity: .5;
+        repo:
+            "https://github.com/vidyashreem46/student"
     }
 
-    50% {
-        opacity: 1;
-    }
-}
+];
 
-.hero-intro {
 
-    color: var(--text-muted);
+/* =========================================================
+   PROJECT RENDERING
+========================================================= */
 
-    font-family: var(--mono);
+const projectsGrid =
+    document.getElementById("projectsGrid");
 
-    font-size: 13px;
 
-    margin-bottom: 8px;
-}
+function renderProjects(filter = "all") {
 
-.hero h1 {
+    projectsGrid.innerHTML = "";
 
-    font-size: clamp(
-        65px,
-        9vw,
-        120px
-    );
 
-    line-height: .85;
+    const filteredProjects =
+        filter === "all"
 
-    letter-spacing: -7px;
+            ? projects
 
-    font-weight: 700;
-}
+            : projects.filter(project =>
+                project.categories.includes(filter)
+            );
 
-.hero h1 span {
 
-    color: var(--accent);
-}
+    filteredProjects.forEach((project, index) => {
 
-.hero-role {
+        const card =
+            document.createElement("article");
 
-    display: flex;
 
-    align-items: center;
+        card.className =
+            "project-card reveal";
 
-    gap: 12px;
 
-    margin-top: 28px;
+        card.innerHTML = `
 
-    font-family: var(--mono);
+            <div class="project-top">
 
-    font-size: 11px;
+                <span class="project-number">
+                    ${String(index + 1).padStart(2, "0")}
+                </span>
 
-    letter-spacing: 1px;
+                <div class="project-icon">
+                    <i class="${project.icon}"></i>
+                </div>
 
-    color: var(--text-soft);
-}
+            </div>
 
-.hero-role b {
 
-    color: var(--accent);
-}
+            <h3>
+                ${project.title}
+            </h3>
 
-.role-line {
 
-    width: 35px;
+            <p>
+                ${project.description}
+            </p>
 
-    height: 1px;
 
-    background: var(--accent);
-}
+            <div class="project-tags">
 
-.hero-description {
+                ${project.tags
+                    .map(tag =>
+                        `<span>${tag}</span>`
+                    )
+                    .join("")
+                }
 
-    max-width: 560px;
+            </div>
 
-    color: var(--text-muted);
 
-    font-size: 15px;
+            <a
+                class="project-link"
+                href="${project.repo}"
+                target="_blank"
+                rel="noopener"
+            >
+                VIEW PROJECT ↗
+            </a>
 
-    margin-top: 28px;
-}
+        `;
 
-.hero-description strong {
 
-    color: var(--text-soft);
+        projectsGrid.appendChild(card);
 
-    font-weight: 500;
-}
+    });
 
-.hero-buttons {
 
-    display: flex;
+    observeRevealElements();
 
-    gap: 12px;
-
-    margin-top: 35px;
-}
-
-.btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    padding: 14px 18px;
-
-    border-radius: 10px;
-
-    font-family: var(--mono);
-
-    font-size: 11px;
-
-    transition: .3s;
-}
-
-.btn-primary {
-
-    background: var(--text);
-
-    color: var(--bg);
-}
-
-.btn-primary:hover {
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 15px 35px rgba(255,255,255,.08);
-}
-
-.btn-secondary {
-
-    border: 1px solid var(--border);
-
-    color: var(--text-soft);
-}
-
-.btn-secondary:hover {
-
-    background: rgba(255,255,255,.05);
-
-    color: white;
-}
-
-.hero-socials {
-
-    display: flex;
-
-    gap: 10px;
-
-    margin-top: 30px;
-}
-
-.hero-socials a {
-
-    width: 36px;
-    height: 36px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 9px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    color: var(--text-muted);
-
-    font-size: 13px;
-
-    transition: .3s;
-}
-
-.hero-socials a:hover {
-
-    color: white;
-
-    border-color: var(--accent);
-
-    transform: translateY(-3px);
 }
 
 
-/* =====================================================
-   TERMINAL
-===================================================== */
+/* =========================================================
+   PROJECT FILTERS
+========================================================= */
 
-.hero-right {
+const filterButtons =
+    document.querySelectorAll(".filter-btn");
 
-    position: relative;
 
-    min-height: 480px;
+filterButtons.forEach(button => {
 
-    display: flex;
+    button.addEventListener("click", () => {
 
-    align-items: center;
-
-    justify-content: center;
-}
-
-.terminal-window {
-
-    width: 100%;
-
-    max-width: 500px;
-
-    border: 1px solid var(--border);
-
-    background:
-        rgba(12,14,20,.85);
-
-    border-radius: 15px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 40px 100px rgba(0,0,0,.45),
-
-        0 0 80px rgba(
-            139,124,255,.06
-        );
-}
-
-.terminal-top {
-
-    height: 45px;
-
-    border-bottom: 1px solid var(--border);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 0 16px;
-}
-
-.terminal-dots {
-
-    display: flex;
-
-    gap: 6px;
-}
-
-.terminal-dots span {
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: #30323b;
-}
-
-.terminal-title {
-
-    font-family: var(--mono);
-
-    font-size: 9px;
-
-    color: var(--text-muted);
-}
-
-.terminal-body {
-
-    padding: 30px 22px;
-
-    font-family: var(--mono);
-
-    font-size: 12px;
-
-    line-height: 2.1;
-}
-
-.code-line {
-
-    display: flex;
-
-    gap: 20px;
-}
-
-.line-number {
-
-    width: 18px;
-
-    color: #3d414b;
-
-    user-select: none;
-}
-
-.indent {
-    padding-left: 25px;
-}
-
-.double-indent {
-    padding-left: 50px;
-}
-
-.purple {
-    color: var(--purple);
-}
-
-.blue {
-    color: var(--blue);
-}
-
-.yellow {
-    color: var(--yellow);
-}
-
-.green {
-    color: var(--green);
-}
-
-.terminal-cursor {
-
-    margin-left: 38px;
-
-    color: var(--accent);
-
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-
-    50% {
-        opacity: 0;
-    }
-}
-
-.floating-card {
-
-    position: absolute;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 13px;
-
-    border: 1px solid var(--border);
-
-    background: rgba(15,17,24,.85);
-
-    backdrop-filter: blur(15px);
-
-    border-radius: 12px;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,.25);
-}
-
-.floating-card i {
-
-    color: var(--accent);
-
-    font-size: 15px;
-}
-
-.floating-card strong {
-
-    display: block;
-
-    font-size: 11px;
-}
-
-.floating-card small {
-
-    display: block;
-
-    color: var(--text-muted);
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    margin-top: 2px;
-}
-
-.card-top {
-
-    top: 20px;
-
-    right: -15px;
-}
-
-.card-bottom {
-
-    bottom: 30px;
-
-    left: -15px;
-}
-
-
-/* =====================================================
-   STATS
-===================================================== */
-
-.stats-section {
-
-    width: min(
-        calc(100% - 40px),
-        var(--max-width)
-    );
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    border-top: 1px solid var(--border);
-
-    border-bottom: 1px solid var(--border);
-}
-
-.stat {
-
-    padding: 28px;
-
-    border-right: 1px solid var(--border);
-
-    position: relative;
-}
-
-.stat:last-child {
-    border-right: 0;
-}
-
-.stat strong {
-
-    font-family: var(--mono);
-
-    font-size: 28px;
-
-    font-weight: 400;
-}
-
-.stat > span {
-
-    color: var(--accent);
-
-    font-family: var(--mono);
-}
-
-.stat p {
-
-    color: var(--text-muted);
-
-    font-size: 10px;
-
-    font-family: var(--mono);
-
-    margin-top: 4px;
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1.5fr 1fr;
-
-    gap: 80px;
-}
-
-.big-text {
-
-    font-size: clamp(
-        26px,
-        3vw,
-        42px
-    );
-
-    line-height: 1.2;
-
-    letter-spacing: -1.5px;
-
-    margin-bottom: 30px;
-}
-
-.big-text span {
-    color: var(--accent-soft);
-}
-
-.about-main > p:not(.big-text) {
-
-    color: var(--text-muted);
-
-    max-width: 620px;
-
-    margin-bottom: 15px;
-
-    font-size: 14px;
-}
-
-.about-tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 30px;
-}
-
-.about-tags span {
-
-    border: 1px solid var(--border);
-
-    padding: 8px 11px;
-
-    border-radius: 8px;
-
-    font-family: var(--mono);
-
-    color: var(--text-muted);
-
-    font-size: 9px;
-}
-
-.about-side {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 15px;
-}
-
-.info-card {
-
-    padding: 28px;
-
-    border: 1px solid var(--border);
-
-    background: rgba(255,255,255,.02);
-
-    border-radius: 13px;
-
-    transition: .3s;
-}
-
-.info-card:hover {
-
-    border-color:
-        rgba(139,124,255,.35);
-
-    transform: translateY(-4px);
-}
-
-.card-label {
-
-    color: var(--accent);
-
-    font-family: var(--mono);
-
-    font-size: 9px;
-
-    letter-spacing: 1px;
-}
-
-.info-card h3 {
-
-    margin-top: 18px;
-
-    font-size: 22px;
-}
-
-.info-card p {
-
-    color: var(--text-soft);
-
-    font-size: 12px;
-
-    margin: 4px 0 12px;
-}
-
-.info-card small {
-
-    color: var(--text-muted);
-
-    font-family: var(--mono);
-
-    font-size: 9px;
-
-    line-height: 1.8;
-}
-
-
-/* =====================================================
-   PROJECTS
-===================================================== */
-
-.project-featured {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 18px;
-}
-
-.project-card {
-
-    position: relative;
-
-    min-height: 430px;
-
-    padding: 35px;
-
-    border: 1px solid var(--border);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.035),
-            rgba(255,255,255,.012)
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
         );
 
-    border-radius: 17px;
 
-    overflow: hidden;
+        button.classList.add("active");
 
-    transition: .4s;
-}
-
-.project-card:hover {
-
-    transform: translateY(-7px);
-
-    border-color:
-        rgba(139,124,255,.4);
-
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.25);
-}
-
-.project-large {
-
-    grid-column: span 2;
-
-    min-height: 500px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 40px;
-}
-
-.project-number {
-
-    position: absolute;
-
-    top: 25px;
-
-    right: 28px;
-
-    font-family: var(--mono);
-
-    font-size: 10px;
-
-    color: var(--text-muted);
-}
-
-.project-meta {
-
-    display: flex;
-
-    gap: 15px;
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    letter-spacing: 1px;
-
-    color: var(--accent);
-}
-
-.project-content h3 {
-
-    font-size: 37px;
-
-    line-height: 1;
-
-    letter-spacing: -1.5px;
-
-    margin-top: 28px;
-}
-
-.project-content p {
-
-    color: var(--text-muted);
-
-    font-size: 13px;
-
-    max-width: 460px;
-
-    margin-top: 20px;
-}
-
-.tech-list {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-top: 25px;
-}
-
-.tech-list span {
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    color: var(--text-muted);
-
-    border: 1px solid var(--border);
-
-    padding: 6px 8px;
-
-    border-radius: 6px;
-}
-
-.project-link {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    margin-top: 28px;
-
-    font-family: var(--mono);
-
-    font-size: 10px;
-
-    color: var(--text-soft);
-
-    transition: .3s;
-}
-
-.project-link:hover {
-
-    color: var(--accent-soft);
-
-    gap: 12px;
-}
-
-
-/* =====================================================
-   MINI DASHBOARD
-===================================================== */
-
-.project-visual {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-.mini-dashboard {
-
-    width: 90%;
-
-    padding: 22px;
-
-    border: 1px solid var(--border);
-
-    background: rgba(0,0,0,.22);
-
-    border-radius: 12px;
-
-    transform:
-        perspective(900px)
-        rotateY(-7deg)
-        rotateX(3deg);
-
-    box-shadow:
-        30px 30px 70px rgba(0,0,0,.3);
-}
-
-.mini-header {
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    color: var(--accent);
-
-    padding-bottom: 15px;
-
-    border-bottom: 1px solid var(--border);
-}
-
-.mini-score {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 8px;
-
-    margin-top: 20px;
-}
-
-.mini-score div {
-
-    padding: 12px 8px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 7px;
-}
-
-.mini-score span {
-
-    display: block;
-
-    font-family: var(--mono);
-
-    color: var(--text-muted);
-
-    font-size: 7px;
-}
-
-.mini-score strong {
-
-    display: block;
-
-    margin-top: 5px;
-
-    font-size: 17px;
-
-    font-weight: 500;
-}
-
-.mini-chart {
-
-    height: 130px;
-
-    display: flex;
-
-    align-items: end;
-
-    gap: 8px;
-
-    padding-top: 25px;
-}
-
-.mini-chart span {
-
-    flex: 1;
-
-    background:
-        linear-gradient(
-            to top,
-            var(--accent),
-            rgba(139,124,255,.1)
-        );
-
-    border-radius: 3px 3px 0 0;
-
-    opacity: .7;
-}
-
-
-/* =====================================================
-   OTHER PROJECTS
-===================================================== */
-
-.other-projects {
-
-    margin-top: 80px;
-}
-
-.other-title {
-
-    display: flex;
-
-    align-items: end;
-
-    justify-content: space-between;
-
-    border-bottom: 1px solid var(--border);
-
-    padding-bottom: 20px;
-
-    margin-bottom: 10px;
-}
-
-.other-title > span {
-
-    font-family: var(--mono);
-
-    color: var(--accent);
-
-    font-size: 9px;
-
-    letter-spacing: 2px;
-}
-
-.other-title p {
-
-    color: var(--text-muted);
-
-    font-size: 11px;
-
-    max-width: 380px;
-}
-
-.project-list {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-}
-
-.small-project {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 20px 5px;
-
-    border-bottom: 1px solid var(--border);
-
-    transition: .3s;
-}
-
-.small-project:hover {
-
-    padding-left: 12px;
-}
-
-.small-project > span {
-
-    font-family: var(--mono);
-
-    font-size: 9px;
-
-    color: var(--text-muted);
-
-    width: 20px;
-}
-
-.small-project div {
-
-    flex: 1;
-}
-
-.small-project h4 {
-
-    font-size: 13px;
-
-    font-weight: 500;
-}
-
-.small-project p {
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    color: var(--text-muted);
-
-    margin-top: 3px;
-}
-
-.small-project i {
-
-    color: var(--text-muted);
-
-    font-size: 10px;
-}
-
-
-/* =====================================================
-   CURRENTLY BUILDING
-===================================================== */
-
-.building-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap: 18px;
-}
-
-.building-card {
-
-    position: relative;
-
-    padding: 35px;
-
-    border: 1px dashed
-        rgba(139,124,255,.25);
-
-    border-radius: 15px;
-
-    background:
-        rgba(139,124,255,.025);
-
-    transition: .3s;
-}
-
-.building-card:hover {
-
-    background:
-        rgba(139,124,255,.05);
-
-    transform: translateY(-5px);
-}
-
-.building-icon {
-
-    width: 46px;
-    height: 46px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid var(--border);
-
-    border-radius: 11px;
-
-    color: var(--accent);
-
-    margin-bottom: 25px;
-}
-
-.building-status {
-
-    position: absolute;
-
-    top: 30px;
-
-    right: 30px;
-
-    font-family: var(--mono);
-
-    color: var(--accent);
-
-    font-size: 8px;
-
-    letter-spacing: 1px;
-}
 
-.building-card h3 {
+        const filter =
+            button.dataset.filter;
 
-    font-size: 27px;
 
-    line-height: 1.05;
+        renderProjects(filter);
 
-    max-width: 250px;
-}
-
-.building-card p {
-
-    color: var(--text-muted);
-
-    font-size: 12px;
-
-    margin-top: 15px;
-
-    max-width: 450px;
-}
-
-.building-tech {
-
-    display: flex;
-
-    gap: 7px;
-
-    margin-top: 22px;
-}
-
-.building-tech span {
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    color: var(--text-muted);
-
-    border: 1px solid var(--border);
-
-    border-radius: 6px;
-
-    padding: 6px 8px;
-}
-
-
-/* =====================================================
-   EXPERIENCE
-===================================================== */
-
-.experience-card {
-
-    display: grid;
-
-    grid-template-columns: 130px 1fr;
-
-    border: 1px solid var(--border);
-
-    border-radius: 15px;
-
-    padding: 35px;
-
-    background:
-        rgba(255,255,255,.02);
-}
-
-.experience-date {
-
-    font-family: var(--mono);
-
-    color: var(--text-muted);
-
-    font-size: 11px;
-}
-
-.experience-line {
-
-    width: 1px;
-
-    height: 100px;
-
-    background:
-        linear-gradient(
-            var(--accent),
-            transparent
-        );
-
-    margin: 15px 0 0 4px;
-}
-
-.experience-top {
-
-    display: flex;
-
-    align-items: start;
-
-    justify-content: space-between;
-}
-
-.experience-label {
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    letter-spacing: 1.5px;
-
-    color: var(--accent);
-}
-
-.experience-main h3 {
-
-    font-size: 34px;
-
-    margin-top: 7px;
-}
-
-.completed {
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    color: var(--green);
-
-    border: 1px solid
-        rgba(126,226,168,.25);
-
-    padding: 7px 9px;
-
-    border-radius: 7px;
-}
-
-.experience-main > p {
-
-    max-width: 650px;
-
-    color: var(--text-muted);
-
-    font-size: 13px;
-
-    margin-top: 18px;
-}
-
-.experience-tags {
-
-    display: flex;
-
-    gap: 7px;
-
-    margin-top: 22px;
-}
-
-.experience-tags span {
-
-    font-family: var(--mono);
-
-    color: var(--text-muted);
-
-    border: 1px solid var(--border);
-
-    font-size: 8px;
-
-    padding: 6px 8px;
-
-    border-radius: 6px;
-}
-
-
-/* =====================================================
-   SKILLS
-===================================================== */
-
-.skills-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 1px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-
-    border-radius: 15px;
-
-    overflow: hidden;
-}
-
-.skill-category {
-
-    padding: 30px;
-
-    background: var(--bg-soft);
-
-    min-height: 190px;
-
-    transition: .3s;
-}
-
-.skill-category:hover {
-
-    background: #11131b;
-}
-
-.skill-heading {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-bottom: 25px;
-}
-
-.skill-heading i {
-
-    color: var(--accent);
-
-    font-size: 13px;
-}
-
-.skill-heading h3 {
+    });
 
-    font-size: 13px;
+});
 
-    font-weight: 500;
-}
-
-.skill-items {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-}
-
-.skill-items span {
-
-    padding: 7px 9px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 7px;
-
-    font-family: var(--mono);
-
-    font-size: 8px;
-
-    color: var(--text-muted);
-
-    transition: .3s;
-}
-
-.skill-items span:hover {
-
-    color: white;
-
-    border-color:
-        rgba(139,124,255,.4);
-}
-
-
-/* =====================================================
-   CERTIFICATIONS
-===================================================== */
-
-.cert-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 12px;
-}
-
-.cert-card {
-
-    position: relative;
-
-    min-height: 240px;
-
-    padding: 25px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 13px;
-
-    transition: .3s;
-}
-
-.cert-card:hover {
-
-    transform: translateY(-5px);
-
-    border-color:
-        rgba(139,124,255,.35);
-}
-
-.cert-card > span {
-
-    position: absolute;
-
-    top: 20px;
-
-    right: 20px;
-
-    font-family: var(--mono);
-
-    color: var(--text-muted);
-
-    font-size: 8px;
-}
-
-.cert-card i {
-
-    color: var(--accent);
-
-    margin-top: 30px;
-
-    font-size: 18px;
-}
-
-.cert-card h3 {
-
-    font-size: 17px;
-
-    line-height: 1.2;
-
-    margin-top: 25px;
-}
-
-.cert-card p {
 
-    color: var(--text-muted);
+/* =========================================================
+   INITIAL PROJECT LOAD
+========================================================= */
 
-    font-size: 10px;
+renderProjects();
 
-    margin-top: 10px;
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact {
-
-    padding-bottom: 150px;
-}
-
-.contact-box {
-
-    position: relative;
-
-    overflow: hidden;
-
-    text-align: center;
-
-    border: 1px solid var(--border);
-
-    border-radius: 20px;
-
-    padding: 90px 30px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(139,124,255,.09),
-            transparent 55%
-        );
-}
-
-.contact-box h2 {
-
-    font-size:
-        clamp(50px,8vw,100px);
-
-    line-height: .9;
-
-    letter-spacing: -5px;
-
-    margin-top: 15px;
-}
-
-.contact-box h2 span {
-
-    color: var(--accent);
-}
-
-.contact-box > p {
-
-    max-width: 600px;
-
-    margin: 25px auto 35px;
-
-    color: var(--text-muted);
 
-    font-size: 13px;
-}
-
-.email-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    border: 1px solid var(--border);
-
-    padding: 15px 20px;
-
-    border-radius: 10px;
-
-    font-family: var(--mono);
-
-    font-size: 11px;
-
-    transition: .3s;
-}
-
-.email-button:hover {
-
-    background: white;
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
 
-    color: var(--bg);
+const sections =
+    document.querySelectorAll("section[id]");
 
-    transform: translateY(-3px);
-}
-
-.contact-socials {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 25px;
-}
 
-.contact-socials a {
+const navLinks =
+    document.querySelectorAll(".nav-links a");
 
-    color: var(--text-muted);
 
-    font-family: var(--mono);
+function updateNavigation() {
 
-    font-size: 9px;
+    let currentSection = "";
 
-    transition: .3s;
-}
-
-.contact-socials a:hover {
-
-    color: white;
-}
 
+    sections.forEach(section => {
 
-/* =====================================================
-   FOOTER
-===================================================== */
+        const sectionTop =
+            section.offsetTop - 150;
 
-footer {
 
-    width: min(
-        calc(100% - 40px),
-        var(--max-width)
-    );
+        if (
+            window.scrollY >= sectionTop
+        ) {
+            currentSection =
+                section.getAttribute("id");
+        }
 
-    margin: auto;
+    });
 
-    padding: 30px 0 40px;
 
-    border-top: 1px solid var(--border);
+    navLinks.forEach(link => {
 
-    display: flex;
+        link.classList.remove("active");
 
-    align-items: center;
 
-    justify-content: space-between;
+        if (
+            link.getAttribute("href") ===
+            `#${currentSection}`
+        ) {
 
-    color: var(--text-muted);
+            link.classList.add("active");
 
-    font-family: var(--mono);
+        }
 
-    font-size: 8px;
-}
-
-.footer-logo {
+    });
 
-    color: white;
-
-    font-size: 14px;
 }
 
-.footer-logo span {
 
-    color: var(--accent);
-}
+window.addEventListener(
+    "scroll",
+    updateNavigation
+);
 
 
-/* =====================================================
+/* =========================================================
    SCROLL REVEAL
-===================================================== */
+========================================================= */
 
-.section,
-.stats-section {
+function observeRevealElements() {
 
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.section.visible,
-.stats-section.visible {
-
-    opacity: 1;
-
-    transform: translateY(0);
-}
+    const elements =
+        document.querySelectorAll(".reveal");
 
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+    const observer =
+        new IntersectionObserver(
 
-@media (max-width: 950px) {
+            entries => {
 
-    .nav-links {
-        display: none;
-    }
+                entries.forEach(entry => {
 
-    .nav-connect {
-        display: none;
-    }
+                    if (entry.isIntersecting) {
 
-    .menu-btn {
-        display: block;
-    }
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-    .hero {
+                        observer.unobserve(
+                            entry.target
+                        );
 
-        grid-template-columns: 1fr;
+                    }
 
-        padding-top: 150px;
-    }
+                });
 
-    .hero-right {
+            },
 
-        min-height: 400px;
-    }
+            {
+                threshold: 0.08
+            }
 
-    .stats-section {
+        );
 
-        grid-template-columns:
-            repeat(2,1fr);
-    }
 
-    .stat:nth-child(2) {
+    elements.forEach(element =>
+        observer.observe(element)
+    );
 
-        border-right: 0;
-    }
-
-    .stat:nth-child(1),
-    .stat:nth-child(2) {
-
-        border-bottom: 1px solid var(--border);
-    }
-
-    .about-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .cert-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
 }
 
 
-@media (max-width: 700px) {
+observeRevealElements();
 
-    .navbar {
 
-        width: calc(100% - 24px);
+/* =========================================================
+   THEME TOGGLE
+========================================================= */
 
-        margin-top: 10px;
-    }
+const themeToggle =
+    document.getElementById("themeToggle");
 
-    .section {
 
-        width: calc(100% - 30px);
+const savedTheme =
+    localStorage.getItem("portfolio-theme");
 
-        padding: 85px 0;
-    }
 
-    .hero h1 {
+if (savedTheme === "light") {
 
-        font-size: 68px;
+    document.body.classList.add("light");
 
-        letter-spacing: -5px;
-    }
-
-    .hero-right {
-
-        min-height: 330px;
-    }
-
-    .floating-card {
-
-        display: none;
-    }
-
-    .terminal-body {
-
-        font-size: 9px;
-    }
-
-    .project-featured {
-
-        grid-template-columns: 1fr;
-    }
-
-    .project-large {
-
-        grid-column: span 1;
-
-        grid-template-columns: 1fr;
-
-        min-height: auto;
-    }
-
-    .project-visual {
-
-        display: none;
-    }
-
-    .project-card {
-
-        min-height: auto;
-
-        padding: 28px;
-    }
-
-    .project-content h3 {
-
-        font-size: 30px;
-    }
-
-    .project-list {
-
-        grid-template-columns: 1fr;
-    }
-
-    .building-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .experience-card {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-    .experience-line {
-
-        display: none;
-    }
-
-    .skills-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .cert-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-
-        gap: 15px;
-
-        margin-bottom: 45px;
-    }
-
-    .section-heading h2 {
-
-        font-size: 43px;
-
-        letter-spacing: -2px;
-    }
-
-    .contact-box {
-
-        padding: 65px 20px;
-    }
-
-    .contact-box h2 {
-
-        font-size: 55px;
-
-        letter-spacing: -3px;
-    }
-
-    .email-button {
-
-        font-size: 9px;
-
-        max-width: 100%;
-
-        word-break: break-all;
-    }
-
-    footer {
-
-        flex-direction: column;
-
-        gap: 12px;
-
-        text-align: center;
-    }
+    themeToggle.innerHTML =
+        '<i class="fa-solid fa-sun"></i>';
 
 }
+
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light");
+
+
+    const isLight =
+        document.body.classList.contains("light");
+
+
+    localStorage.setItem(
+        "portfolio-theme",
+        isLight ? "light" : "dark"
+    );
+
+
+    themeToggle.innerHTML = isLight
+
+        ? '<i class="fa-solid fa-sun"></i>'
+
+        : '<i class="fa-regular fa-moon"></i>';
+
+});
+
+
+/* =========================================================
+   SMOOTH NAVIGATION
+========================================================= */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        const targetId =
+            link.getAttribute("href");
+
+
+        if (
+            targetId === "#" ||
+            !document.querySelector(targetId)
+        ) {
+            return;
+        }
+
+
+        event.preventDefault();
+
+
+        document
+            .querySelector(targetId)
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    });
+
+});
+
+
+/* =========================================================
+   CURSOR GLOW
+========================================================= */
+
+const cursorGlow =
+    document.createElement("div");
+
+
+cursorGlow.style.position = "fixed";
+cursorGlow.style.width = "180px";
+cursorGlow.style.height = "180px";
+cursorGlow.style.borderRadius = "50%";
+cursorGlow.style.pointerEvents = "none";
+cursorGlow.style.zIndex = "0";
+cursorGlow.style.background =
+    "radial-gradient(circle, rgba(155,99,255,.08), transparent 70%)";
+cursorGlow.style.transform =
+    "translate(-50%, -50%)";
+cursorGlow.style.transition =
+    "left .15s ease, top .15s ease";
+
+
+document.body.appendChild(cursorGlow);
+
+
+document.addEventListener("mousemove", event => {
+
+    cursorGlow.style.left =
+        `${event.clientX}px`;
+
+    cursorGlow.style.top =
+        `${event.clientY}px`;
+
+});
+
+
+/* =========================================================
+   CONSOLE MESSAGE
+========================================================= */
+
+console.log(
+    "%c VIDYASHREE M ",
+    "background:#7547ff;color:white;padding:8px 12px;font-weight:bold;"
+);
+
+console.log(
+    "Data Science × Artificial Intelligence"
+);
+
+console.log(
+    "Keep Building."
+);
