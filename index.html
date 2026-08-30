@@ -1,624 +1,526 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-```
-<meta name="description"
-      content="Vidyashree M — Data Science & Artificial Intelligence portfolio.">
-
-<title>Vidyashree M | Data × AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidyashree M — Data Science × AI</title>
+<meta name="description" content="Vidyashree M — Data Science & AI student at Sarada Vilas College, Mysuru. A working log of projects in machine learning, computer vision and applied data analysis.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
-```
-
 </head>
-
 <body>
 
-<div class="noise"></div>
+<!-- Grain / noise overlay -->
+<div class="grain" aria-hidden="true"></div>
 
-<!-- NAVIGATION -->
+<!-- ============ SKIP LINK ============ -->
+<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="topbar">
-
-```
-<a href="#home" class="brand">
-    <span>VM</span>
-    <b>Vidyashree</b>
-</a>
-
-<nav>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#skills">Stack</a>
-    <a href="#contact">Contact</a>
+<!-- ============ INDEX RAIL (desktop) ============ -->
+<nav class="rail" aria-label="Section index">
+  <div class="rail-mark">
+    <span class="rail-initials">VM</span>
+    <span class="rail-sub">LOG</span>
+  </div>
+  <ol class="rail-list">
+    <li><a href="#hero" data-rail="00"><span class="rail-num">00</span><span class="rail-label">Index</span></a></li>
+    <li><a href="#about" data-rail="01"><span class="rail-num">01</span><span class="rail-label">Subject</span></a></li>
+    <li><a href="#skills" data-rail="02"><span class="rail-num">02</span><span class="rail-label">Instruments</span></a></li>
+    <li><a href="#archive" data-rail="03"><span class="rail-num">03</span><span class="rail-label">Archive</span></a></li>
+    <li><a href="#record" data-rail="04"><span class="rail-num">04</span><span class="rail-label">Record</span></a></li>
+    <li><a href="#contact" data-rail="05"><span class="rail-num">05</span><span class="rail-label">Contact</span></a></li>
+  </ol>
+  <a class="rail-status" href="#contact">
+    <span class="dot" aria-hidden="true"></span>
+    Open to internships
+  </a>
 </nav>
 
-<a href="#contact" class="status">
-    <i></i>
-    Open to opportunities
-</a>
-```
-
+<!-- ============ MOBILE TOP BAR ============ -->
+<header class="topbar">
+  <a href="#hero" class="topbar-mark">VM<span>/LOG</span></a>
+  <button class="topbar-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open section index">
+    <span></span><span></span>
+  </button>
 </header>
+<nav class="mobile-nav" id="mobileNav" aria-label="Section index">
+  <a href="#hero" data-rail="00"><span class="rail-num">00</span> Index</a>
+  <a href="#about" data-rail="01"><span class="rail-num">01</span> Subject</a>
+  <a href="#skills" data-rail="02"><span class="rail-num">02</span> Instruments</a>
+  <a href="#archive" data-rail="03"><span class="rail-num">03</span> Archive</a>
+  <a href="#record" data-rail="04"><span class="rail-num">04</span> Record</a>
+  <a href="#contact" data-rail="05"><span class="rail-num">05</span> Contact</a>
+</nav>
 
-<main id="home">
+<main id="main">
 
-<!-- HERO -->
+  <!-- ============ 00 · HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-frame">
+      <p class="hero-eyebrow mono">FIELD LOG — MYSURU, KARNATAKA, IN</p>
 
-<section class="hero section-pad">
+      <h1 class="hero-headline">
+        <span class="line">DATA</span>
+        <span class="line line--outline">BECOMES</span>
+        <span class="line">INTELLIGENCE.</span>
+      </h1>
 
-```
-<div class="hero-copy">
-
-    <p class="eyebrow">
-        DATA SCIENCE <span>×</span> ARTIFICIAL INTELLIGENCE
-    </p>
-
-    <h1>
-        I turn <em>data</em><br>
-        into things<br>
-        people can use.
-    </h1>
-
-    <p class="intro">
-        I'm Vidyashree — a B.Sc. (Hons) Data Science & AI student
-        who enjoys building practical systems, exploring machine
-        learning and turning messy data into clear ideas.
-    </p>
-
-    <div class="hero-actions">
-
-        <a href="#work" class="btn primary">
-            Explore my work
-            <span>↘</span>
-        </a>
-
-        <a href="https://github.com/vidyashreem46"
-           target="_blank"
-           class="text-link">
-            GitHub ↗
-        </a>
-
+      <div class="hero-meta">
+        <p class="hero-name">Vidyashree&nbsp;M</p>
+        <p class="hero-role mono">Data Science &amp; Artificial Intelligence — B.Sc. (Hons), Sarada Vilas College · 3rd Year, 5th Semester</p>
+      </div>
     </div>
 
-</div>
-
-
-<!-- CREATIVE AI ORBIT -->
-<div class="hero-art">
-
-    <div class="orbit orbit-a"></div>
-    <div class="orbit orbit-b"></div>
-    <div class="orbit orbit-c"></div>
-
-    <div class="core">
-
-        <span>AI</span>
-
-        <small>
-            DATA<br>
-            IN / IDEAS<br>
-            OUT
-        </small>
-
+    <div class="hero-console" aria-hidden="true">
+      <div class="console-head mono">
+        <span>raw_input.stream</span>
+        <span class="console-live">● live</span>
+      </div>
+      <canvas id="ledgerCanvas"></canvas>
+      <div class="console-pipeline mono">
+        <span class="pipe-stage is-active" data-stage="data">DATA</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-stage" data-stage="model">MODEL</span>
+        <span class="pipe-arrow">→</span>
+        <span class="pipe-stage" data-stage="insight">INSIGHT</span>
+      </div>
     </div>
 
-    <div class="node n1">PY</div>
-    <div class="node n2">ML</div>
-    <div class="node n3">CV</div>
-    <div class="node n4">SQL</div>
-
-    <div class="coord">
-        12.30° N<br>
-        76.65° E
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- MOVING TECHNOLOGY LINE -->
-
-<section class="ticker">
-
-```
-<div>
-    PYTHON · MACHINE LEARNING · COMPUTER VISION ·
-    DATA ANALYSIS · GENERATIVE AI · SQL ·
-    PYTHON · MACHINE LEARNING · COMPUTER VISION ·
-    DATA ANALYSIS · GENERATIVE AI · SQL ·
-</div>
-```
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="work" class="section-pad work-section">
-
-```
-<div class="section-head">
-
-    <div>
-
-        <p class="eyebrow">
-            SELECTED WORK / 01
-        </p>
-
-        <h2>
-            Projects with a<br>
-            <em>purpose.</em>
-        </h2>
-
-    </div>
-
-    <p class="section-note">
-        Not just demos. Each project started with a
-        problem worth understanding.
-    </p>
-
-</div>
-
-
-<div class="project-grid">
-
-
-    <!-- PROJECT 01 -->
-    <article class="project">
-
-        <div class="project-top">
-            <span>01 / AI EVALUATION</span>
-            <span>DJANGO</span>
-        </div>
-
-        <div class="project-visual benchmark">
-
-            <div class="mini-chart">
-                <i style="height:62%"></i>
-                <i style="height:84%"></i>
-                <i style="height:48%"></i>
-                <i style="height:92%"></i>
-                <i style="height:70%"></i>
-            </div>
-
-            <b>
-                AI<br>
-                BENCH
-            </b>
-
-        </div>
-
-        <h3>
-            AI Chatbot<br>
-            Benchmarking Tool
-        </h3>
-
-        <p>
-            A comparison system for evaluating chatbot
-            responses through correctness, creativity,
-            speed and hallucination signals.
-        </p>
-
-        <div class="tags">
-            <span>AI Evaluation</span>
-            <span>Django</span>
-            <span>Analytics</span>
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 02 -->
-    <article class="project">
-
-        <div class="project-top">
-            <span>02 / COMPUTER VISION</span>
-            <span>PYTHON</span>
-        </div>
-
-        <div class="project-visual gesture">
-
-            <div class="hand">✋</div>
-
-            <div class="scan"></div>
-
-            <span>
-                GESTURE / DETECTED
-            </span>
-
-        </div>
-
-        <h3>
-            Hand Gesture<br>
-            Recognition
-        </h3>
-
-        <p>
-            A focused academic computer-vision project
-            exploring gesture classification from image data.
-        </p>
-
-        <div class="tags">
-            <span>OpenCV</span>
-            <span>ML</span>
-            <span>Vision</span>
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 03 -->
-    <article class="project">
-
-        <div class="project-top">
-            <span>03 / MARKET DATA</span>
-            <span>PANDAS</span>
-        </div>
-
-        <div class="project-visual candles">
-
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-
-            <div class="price">
-                OHLC / 15 MIN
-            </div>
-
-        </div>
-
-        <h3>
-            Candlestick<br>
-            Pattern Detection
-        </h3>
-
-        <p>
-            Analysing NSE market data to identify candle
-            structures such as Doji and derive useful
-            trading features.
-        </p>
-
-        <div class="tags">
-            <span>Pandas</span>
-            <span>OHLC</span>
-            <span>Matplotlib</span>
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 04 -->
-    <article class="project small">
-
-        <div class="project-top">
-            <span>04 / AUTOMATION</span>
-            <span>SELENIUM</span>
-        </div>
-
-        <h3>
-            UUCMS Result<br>
-            Automation
-        </h3>
-
-        <p>
-            Browser automation and structured extraction
-            for a repetitive academic workflow.
-        </p>
-
-        <div class="tags">
-            <span>Selenium</span>
-            <span>Automation</span>
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 05 -->
-    <article class="project small">
-
-        <div class="project-top">
-            <span>05 / COMPUTER VISION</span>
-            <span>PYTHON</span>
-        </div>
-
-        <h3>
-            Face Recognition<br>
-            Attendance
-        </h3>
-
-        <p>
-            Exploring computer vision for automated
-            attendance workflows.
-        </p>
-
-        <div class="tags">
-            <span>OpenCV</span>
-            <span>Recognition</span>
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 06 -->
-    <article class="project small">
-
-        <div class="project-top">
-            <span>06 / WEB + DB</span>
-            <span>FLASK</span>
-        </div>
-
-        <h3>
-            QuizMaster
-        </h3>
-
-        <p>
-            A Flask and SQLite quiz application with
-            registration, login and dashboard flow.
-        </p>
-
-        <div class="tags">
-            <span>Flask</span>
-            <span>SQLite</span>
-        </div>
-
-    </article>
-
-</div>
-```
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about" class="about section-pad">
-
-```
-<div class="about-number">
-    02
-</div>
-
-<div class="about-copy">
-
-    <p class="eyebrow">
-        A LITTLE ABOUT ME
-    </p>
-
-    <h2>
-        Curious by default.<br>
-        <em>Builder by choice.</em>
-    </h2>
-
-    <p>
-        I'm currently pursuing B.Sc. (Hons) in Data Science &
-        Artificial Intelligence at Sarada Vilas College, Mysuru.
-        My learning sits at the intersection of data, AI and
-        software — from cleaning datasets to training models
-        and turning ideas into working applications.
-    </p>
-
-    <p>
-        I like projects that make me learn something new:
-        a new dataset, a new algorithm, a new interface or
-        simply a better way to solve an old problem.
-    </p>
-
-    <div class="facts">
-
-        <div>
-            <b>01</b>
-            <span>Data → Insight</span>
-        </div>
-
-        <div>
-            <b>02</b>
-            <span>Model → System</span>
-        </div>
-
-        <div>
-            <b>03</b>
-            <span>Idea → Project</span>
-        </div>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="skills section-pad">
-
-```
-<div class="section-head">
-
-    <div>
-
-        <p class="eyebrow">
-            TOOLS I WORK WITH / 03
-        </p>
-
-        <h2>
-            My working<br>
-            <em>stack.</em>
-        </h2>
-
-    </div>
-
-</div>
-
-
-<div class="skill-board">
-
-    <div class="skill-column">
-
-        <span>LANGUAGES</span>
-
-        <h3>Python</h3>
-        <h3>C</h3>
-        <h3>SQL</h3>
-        <h3>HTML / CSS / JS</h3>
-
-    </div>
-
-
-    <div class="skill-column">
-
-        <span>DATA + ML</span>
-
-        <h3>Pandas</h3>
-        <h3>NumPy</h3>
-        <h3>Scikit-learn</h3>
-        <h3>Matplotlib</h3>
-
-    </div>
-
-
-    <div class="skill-column">
-
-        <span>AI + VISION</span>
-
-        <h3>Neural Networks</h3>
-        <h3>Generative AI</h3>
-        <h3>OpenCV</h3>
-        <h3>EasyOCR / Tesseract</h3>
-
-    </div>
-
-
-    <div class="skill-column">
-
-        <span>BUILD + STORE</span>
-
-        <h3>Django / Flask</h3>
-        <h3>SQLite / MongoDB</h3>
-        <h3>Git / GitHub</h3>
-        <h3>Power BI</h3>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- EDUCATION -->
-
-<section class="education section-pad">
-
-```
-<div class="edu-label">
-
-    <p class="eyebrow">
-        CURRENTLY / 04
-    </p>
-
-    <span>2026</span>
-
-</div>
-
-
-<div class="edu-main">
-
-    <h2>
-        B.Sc. (Hons)<br>
-        <em>Data Science & AI</em>
-    </h2>
-
-    <p>
-        Sarada Vilas College · Mysuru
-    </p>
-
-
-    <div class="certs">
-
-        <span>Oracle Cloud Infrastructure</span>
-        <span>AI Foundations Associate</span>
-        <span>MongoDB GenAI Developer</span>
-        <span>Big Data Concepts</span>
-
-    </div>
-
-</div>
-```
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact section-pad">
-
-```
-<div>
-
-    <p class="eyebrow">
-        HAVE A PROJECT IN MIND? / 05
-    </p>
-
-    <h2>
-        Let's make<br>
-        something <em>interesting.</em>
-    </h2>
-
-    <a href="mailto:vidyashreem46@gmail.com"
-       class="mail">
-
-        vidyashreem46@gmail.com
-        <span>↗</span>
-
+    <a href="#about" class="hero-scroll mono">
+      <span>scroll to read entry 01</span>
+      <span class="scroll-line" aria-hidden="true"></span>
     </a>
+  </section>
 
-</div>
-
-
-<div class="contact-bottom">
-
-    <span>
-        © 2026 Vidyashree M
-    </span>
-
-    <div>
-
-        <a href="https://github.com/vidyashreem46"
-           target="_blank">
-            GitHub
-        </a>
-
-        <a href="https://linkedin.com/in/vidyashree-m-98a7641b7"
-           target="_blank">
-            LinkedIn
-        </a>
-
+  <!-- ============ 01 · ABOUT ============ -->
+  <section class="entry" id="about">
+    <div class="entry-head">
+      <span class="entry-num mono">01</span>
+      <h2 class="entry-title">Subject</h2>
     </div>
 
-</div>
-```
+    <div class="about-grid">
+      <div class="about-chain" role="list" aria-label="How I got here">
+        <div class="chain-node" role="listitem">
+          <span class="chain-index mono">a</span>
+          <span class="chain-text">Data Science Student</span>
+        </div>
+        <div class="chain-node" role="listitem">
+          <span class="chain-index mono">b</span>
+          <span class="chain-text">AI Explorer</span>
+        </div>
+        <div class="chain-node" role="listitem">
+          <span class="chain-index mono">c</span>
+          <span class="chain-text">Project Builder</span>
+        </div>
+        <div class="chain-node" role="listitem">
+          <span class="chain-index mono">d</span>
+          <span class="chain-text">Problem Solver</span>
+        </div>
+      </div>
 
-</section>
+      <div class="about-copy">
+        <p class="about-lede">
+          I study how raw numbers turn into working systems — training models,
+          reading candlestick charts, teaching a camera to recognise a hand.
+          Most of what I know, I know because I built it first and understood
+          it after.
+        </p>
+        <dl class="about-facts mono">
+          <div><dt>Based in</dt><dd>Mysuru, Karnataka, India</dd></div>
+          <div><dt>Studying</dt><dd>B.Sc. (Hons) Data Science &amp; AI</dd></div>
+          <div><dt>Currently</dt><dd>3rd Year / 5th Semester</dd></div>
+          <div><dt>Institution</dt><dd>Sarada Vilas College, Mysuru</dd></div>
+        </dl>
+      </div>
+
+      <div class="about-stats" aria-label="Working numbers">
+        <div class="stat">
+          <span class="stat-num" data-count="14">0</span>
+          <span class="stat-label mono">projects logged</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="6">0</span>
+          <span class="stat-label mono">languages &amp; markup used</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label mono">certifications earned</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · SKILLS / INSTRUMENTS ============ -->
+  <section class="entry entry--dark" id="skills">
+    <div class="entry-head">
+      <span class="entry-num mono">02</span>
+      <h2 class="entry-title">Instruments</h2>
+      <p class="entry-note mono">the tools this work runs on, grouped by what they're for</p>
+    </div>
+
+    <div class="stack" role="list">
+
+      <div class="stack-group" role="listitem" data-group="languages">
+        <div class="stack-group-head">
+          <span class="stack-icon mono">01</span>
+          <h3>Languages</h3>
+        </div>
+        <ul class="stack-tags">
+          <li>Python</li><li>C</li><li>SQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="stack-group" role="listitem" data-group="data">
+        <div class="stack-group-head">
+          <span class="stack-icon mono">02</span>
+          <h3>Data Science</h3>
+        </div>
+        <ul class="stack-tags">
+          <li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>Matplotlib</li><li>Power BI</li>
+        </ul>
+      </div>
+
+      <div class="stack-group" role="listitem" data-group="ai">
+        <div class="stack-group-head">
+          <span class="stack-icon mono">03</span>
+          <h3>AI / ML</h3>
+        </div>
+        <ul class="stack-tags">
+          <li>Machine Learning</li><li>Neural Networks</li><li>Generative AI</li><li>Computer Vision</li>
+        </ul>
+      </div>
+
+      <div class="stack-group" role="listitem" data-group="vision">
+        <div class="stack-group-head">
+          <span class="stack-icon mono">04</span>
+          <h3>Vision</h3>
+        </div>
+        <ul class="stack-tags">
+          <li>OpenCV</li><li>EasyOCR</li><li>Tesseract OCR</li>
+        </ul>
+      </div>
+
+      <div class="stack-group" role="listitem" data-group="build">
+        <div class="stack-group-head">
+          <span class="stack-icon mono">05</span>
+          <h3>Build &amp; Store</h3>
+        </div>
+        <ul class="stack-tags">
+          <li>Django</li><li>Flask</li><li>SQLite</li><li>MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="stack-group" role="listitem" data-group="tools">
+        <div class="stack-group-head">
+          <span class="stack-icon mono">06</span>
+          <h3>Tools</h3>
+        </div>
+        <ul class="stack-tags">
+          <li>Git</li><li>GitHub</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 03 · PROJECT ARCHIVE ============ -->
+  <section class="archive" id="archive">
+    <div class="entry-head">
+      <span class="entry-num mono">03</span>
+      <h2 class="entry-title">Archive</h2>
+      <p class="entry-note mono">six entries, each built to answer a different question</p>
+    </div>
+
+    <!-- PROJECT 01 — AI CHATBOT BENCHMARK -->
+    <article class="project" data-project="benchmark">
+      <div class="project-id">
+        <span class="project-num mono">01</span>
+        <span class="project-cat mono">EVALUATION SYSTEM</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">AI Chatbot<br>Benchmarking Tool</h3>
+        <p class="project-desc">
+          A Django system that scores AI chatbot responses side by side —
+          ChatGPT, Gemini and Copilot — across correctness, creativity,
+          speed and hallucination, so the differences stop being anecdotal.
+        </p>
+        <ul class="project-tech mono">
+          <li>Django</li><li>Python</li><li>SQLite</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn btn--ghost" href="YOUR_PROJECT_GITHUB_URL" target="_blank" rel="noopener">View code ↗</a>
+          <button class="btn btn--text project-toggle" aria-expanded="false">Details +</button>
+        </div>
+        <div class="project-details">
+          <p>Evaluation dimensions logged per response: <strong>correctness</strong>, <strong>creativity</strong>, <strong>speed</strong> and <strong>hallucination rate</strong>. Each model's answers are recorded and scored against the same prompt set, then surfaced as a ranked leaderboard rather than a single verdict.</p>
+        </div>
+      </div>
+      <div class="project-visual" data-visual="benchmark" aria-hidden="true">
+        <canvas class="viz-canvas"></canvas>
+      </div>
+    </article>
+
+    <!-- PROJECT 02 — HAND GESTURE RECOGNITION -->
+    <article class="project project--reverse" data-project="gesture">
+      <div class="project-id">
+        <span class="project-num mono">02</span>
+        <span class="project-cat mono">COMPUTER VISION · ACADEMIC</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Hand Gesture<br>Recognition</h3>
+        <p class="project-desc">
+          An academic computer vision project that classifies hand gestures
+          from image data — the groundwork for gesture-driven interaction,
+          built to understand detection pipelines from the ground up.
+        </p>
+        <ul class="project-tech mono">
+          <li>Python</li><li>Computer Vision</li><li>Machine Learning</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn btn--ghost" href="YOUR_PROJECT_GITHUB_URL" target="_blank" rel="noopener">View code ↗</a>
+          <button class="btn btn--text project-toggle" aria-expanded="false">Details +</button>
+        </div>
+        <div class="project-details">
+          <p>Focus areas: frame capture, hand-region isolation and gesture classification from static image data — an academic exercise in building a recognition pipeline rather than a production tool.</p>
+        </div>
+      </div>
+      <div class="project-visual" data-visual="gesture" aria-hidden="true">
+        <canvas class="viz-canvas"></canvas>
+      </div>
+    </article>
+
+    <!-- PROJECT 03 — CANDLESTICK PATTERN DETECTION -->
+    <article class="project" data-project="candlestick">
+      <div class="project-id">
+        <span class="project-num mono">03</span>
+        <span class="project-cat mono">QUANTITATIVE ANALYSIS</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Candlestick Pattern<br>Detection</h3>
+        <p class="project-desc">
+          Reads 15-minute OHLC data from the NSE and derives body, range,
+          upper wick and lower wick for each candle to flag structures
+          like Doji formations directly from the numbers.
+        </p>
+        <ul class="project-tech mono">
+          <li>Python</li><li>Pandas</li><li>Matplotlib</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn btn--ghost" href="YOUR_PROJECT_GITHUB_URL" target="_blank" rel="noopener">View code ↗</a>
+          <button class="btn btn--text project-toggle" aria-expanded="false">Details +</button>
+        </div>
+        <div class="project-details">
+          <p>Features derived per candle: <strong>Open, High, Low, Close</strong>, <strong>Body</strong>, <strong>Range</strong>, <strong>Upper Wick</strong> and <strong>Lower Wick</strong> — used together to flag Doji patterns in 15-minute NSE data.</p>
+        </div>
+      </div>
+      <div class="project-visual" data-visual="candlestick" aria-hidden="true">
+        <canvas class="viz-canvas"></canvas>
+      </div>
+    </article>
+
+    <!-- PROJECT 04 — UUCMS RESULT AUTOMATION -->
+    <article class="project project--reverse" data-project="uucms">
+      <div class="project-id">
+        <span class="project-num mono">04</span>
+        <span class="project-cat mono">BROWSER AUTOMATION</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">UUCMS Result<br>Automation</h3>
+        <p class="project-desc">
+          A Selenium script that automates and structures extraction from
+          a repetitive academic results workflow — turning a manual,
+          click-by-click task into a repeatable run.
+        </p>
+        <ul class="project-tech mono">
+          <li>Selenium</li><li>Python</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn btn--ghost" href="YOUR_PROJECT_GITHUB_URL" target="_blank" rel="noopener">View code ↗</a>
+          <button class="btn btn--text project-toggle" aria-expanded="false">Details +</button>
+        </div>
+        <div class="project-details">
+          <p>Drives a browser session end to end: navigation, form entry and structured extraction, replacing a recurring manual academic task with a single script run.</p>
+        </div>
+      </div>
+      <div class="project-visual" data-visual="uucms" aria-hidden="true">
+        <canvas class="viz-canvas"></canvas>
+      </div>
+    </article>
+
+    <!-- PROJECT 05 — FACE RECOGNITION ATTENDANCE -->
+    <article class="project" data-project="face">
+      <div class="project-id">
+        <span class="project-num mono">05</span>
+        <span class="project-cat mono">COMPUTER VISION</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Face Recognition<br>Attendance</h3>
+        <p class="project-desc">
+          A computer-vision attendance workflow that detects and recognises
+          faces from a camera feed to mark presence — replacing a roll
+          call with a detection frame.
+        </p>
+        <ul class="project-tech mono">
+          <li>Python</li><li>OpenCV</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn btn--ghost" href="YOUR_PROJECT_GITHUB_URL" target="_blank" rel="noopener">View code ↗</a>
+          <button class="btn btn--text project-toggle" aria-expanded="false">Details +</button>
+        </div>
+        <div class="project-details">
+          <p>Pipeline: face detection on incoming frames, recognition against known encodings, and a logged attendance entry per match.</p>
+        </div>
+      </div>
+      <div class="project-visual" data-visual="face" aria-hidden="true">
+        <canvas class="viz-canvas"></canvas>
+      </div>
+    </article>
+
+    <!-- PROJECT 06 — QUIZMASTER -->
+    <article class="project project--reverse" data-project="quiz">
+      <div class="project-id">
+        <span class="project-num mono">06</span>
+        <span class="project-cat mono">FULL-STACK APPLICATION</span>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">QuizMaster</h3>
+        <p class="project-desc">
+          A Flask application with registration, login, interest
+          selection and a dashboard — the full loop of a small
+          product, not just a script.
+        </p>
+        <ul class="project-tech mono">
+          <li>Flask</li><li>SQLite</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn btn--ghost" href="YOUR_PROJECT_GITHUB_URL" target="_blank" rel="noopener">View code ↗</a>
+          <button class="btn btn--text project-toggle" aria-expanded="false">Details +</button>
+        </div>
+        <div class="project-details">
+          <p>Features: account registration and login, interest selection at onboarding, a running quiz flow, and a dashboard summarising activity.</p>
+        </div>
+      </div>
+      <div class="project-visual" data-visual="quiz" aria-hidden="true">
+        <canvas class="viz-canvas"></canvas>
+      </div>
+    </article>
+
+    <!-- OTHER WORK -->
+    <div class="also-built">
+      <p class="also-built-label mono">also in the log</p>
+      <ul class="also-built-list">
+        <li>Big Data Visualization Dashboard</li>
+        <li>Phishing Website Detection</li>
+        <li>Library Book Management System</li>
+        <li>Bank Management System</li>
+        <li>Password Generator</li>
+        <li>SQLite DBMS Project</li>
+        <li>Expense Tracker</li>
+        <li>Quiz App</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ============ 04 · RECORD (education + certifications) ============ -->
+  <section class="entry" id="record">
+    <div class="entry-head">
+      <span class="entry-num mono">04</span>
+      <h2 class="entry-title">Record</h2>
+      <p class="entry-note mono">a dated account of study and certification</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <span class="timeline-date mono">2023 — PRESENT</span>
+          <h3>B.Sc. (Hons) Data Science &amp; Artificial Intelligence</h3>
+          <p>Sarada Vilas College, Mysuru · currently 3rd year, 5th semester</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <span class="timeline-date mono">2025</span>
+          <h3>Oracle Cloud Infrastructure Certification</h3>
+          <p>Oracle</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <span class="timeline-date mono">CERTIFIED</span>
+          <h3>AI Foundations Associate</h3>
+          <p>Certification in applied AI fundamentals</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <span class="timeline-date mono">CERTIFIED</span>
+          <h3>MongoDB GenAI Developer</h3>
+          <p>MongoDB</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <div class="timeline-content">
+          <span class="timeline-date mono">CERTIFIED</span>
+          <h3>Big Data Concepts</h3>
+          <p>Foundational certification in big data systems</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="practice-note mono">
+      <span>ongoing practice —</span> Python · SQL · LeetCode · data analysis · machine learning
+    </div>
+  </section>
+
+  <!-- ============ 05 · CONTACT ============ -->
+  <section class="closing" id="contact">
+    <div class="closing-frame">
+      <p class="closing-eyebrow mono">END OF LOG — ENTRY 05</p>
+      <h2 class="closing-headline">
+        <span>HAVE AN</span>
+        <span>IDEA?</span>
+      </h2>
+      <p class="closing-sub">
+        <span class="closing-sub-line">LET'S</span>
+        <span class="closing-sub-line closing-sub-line--accent">BUILD IT.</span>
+      </p>
+
+      <div class="closing-links">
+        <a class="magnetic-btn" href="mailto:dreamtrail06@gmail.com" data-magnetic>
+          <span class="magnetic-label mono">01 / EMAIL</span>
+          <span class="magnetic-value">vidyashreem46@gmail.com</span>
+        </a>
+        <a class="magnetic-btn" href="https://github.com/vidyashreem46" target="_blank" rel="noopener" data-magnetic>
+          <span class="magnetic-label mono">02 / GITHUB</span>
+          <span class="magnetic-value">github.com/vidyashreem46</span>
+        </a>
+        <a class="magnetic-btn" href="https://linkedin.com/in/vidyashree-m-98a7641b7" target="_blank" rel="noopener" data-magnetic>
+          <span class="magnetic-label mono">03 / LINKEDIN</span>
+          <span class="magnetic-value">linkedin.com/in/vidyashree-m</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer mono">
+      <span>© 2026 Vidyashree M</span>
+      <span>Mysuru, Karnataka, India</span>
+      <span>Built with HTML, CSS &amp; vanilla JS</span>
+    </footer>
+  </section>
 
 </main>
 
-<button id="topBtn" class="top-btn">
-    ↑
-</button>
-
 <script src="js/script.js"></script>
-
 </body>
 </html>
-
