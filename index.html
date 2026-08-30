@@ -2,63 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vidyashree M | Data Science & AI</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Vidyashree M — Data Science & Artificial Intelligence student building practical projects with Python, AI, data and intelligent systems."
-    >
+    <meta name="description"
+          content="Vidyashree M — Data Science & Artificial Intelligence portfolio.">
 
-    <!-- Google Fonts -->
+    <meta name="author" content="Vidyashree M">
+
+    <title>Vidyashree M — Data Science & AI</title>
+
+    <!-- Modern technical typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- Background -->
-<div class="ambient"></div>
-<div class="grid-background"></div>
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="ambient-background">
+    <div class="grid-layer"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="cursor-glow"></div>
+</div>
+
 <div class="noise"></div>
 
-<!-- ================= NAVIGATION ================= -->
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="topbar">
 
     <a href="#home" class="brand">
-        <span>VM</span>
-        <b>VIDYASHREE M</b>
+        <span class="brand-mark">VM</span>
+
+        <div>
+            <strong>VIDYASHREE M</strong>
+            <small>DS & AI</small>
+        </div>
     </a>
 
-    <nav>
+    <nav id="mainNav">
+        <a href="#home">Home</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <a
-        href="mailto:dreamtrail06@gmail.com"
-        class="status"
-    >
-        <i></i>
-        Seeking Internship
-    </a>
+    <div class="nav-status">
+        <span class="status-dot"></span>
+        SEEKING INTERNSHIP
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        ☰
+    </button>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <main>
 
@@ -67,43 +85,42 @@
     <div class="hero-content">
 
         <div class="eyebrow">
-            DATA SCIENCE · ARTIFICIAL INTELLIGENCE · 2026
+            <span>01</span>
+            PORTFOLIO / 2026
         </div>
 
         <h1>
-            Vidyashree<br>
+            VIDYASHREE<br>
             <em>M.</em>
         </h1>
 
         <div class="hero-title">
-            DATA SCIENCE &<br>
+            DATA SCIENCE <span>&</span><br>
             ARTIFICIAL INTELLIGENCE
         </div>
 
-        <p class="intro">
-            Building practical solutions with Python, data,
-            AI and intelligent systems — while continuously
-            learning through hands-on projects.
+        <p class="hero-description">
+            Building practical solutions with Python, data, AI
+            and intelligent systems — through projects,
+            experimentation and continuous learning.
         </p>
 
         <div class="career-status">
-            <span class="pulse"></span>
+            <span class="status-dot"></span>
             SEEKING INTERNSHIP OPPORTUNITIES
         </div>
 
         <div class="hero-actions">
 
-            <a href="#work" class="btn primary">
+            <a href="#work" class="btn btn-primary">
                 VIEW MY WORK
-                <span>↘</span>
+                <span>↗</span>
             </a>
 
-            <!-- Change filename if your actual PDF filename is different -->
-            <a
-                href="assets/Vidyashree_Resume.pdf"
-                target="_blank"
-                class="btn secondary"
-            >
+            <a href="assets/resume.pdf"
+               class="btn btn-outline"
+               target="_blank"
+               rel="noopener">
                 VIEW RESUME
             </a>
 
@@ -112,59 +129,49 @@
     </div>
 
 
-    <!-- HERO TECHNICAL VISUAL -->
+    <!-- =================================================
+         HERO VISUAL
+    ================================================= -->
 
-    <div class="hero-art">
+    <div class="hero-visual">
 
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="orbit orbit-c"></div>
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="visual-orbit orbit-three"></div>
 
-        <div class="data-line line-one"></div>
-        <div class="data-line line-two"></div>
+        <div class="visual-core">
 
-        <div class="node n1">
-            01
-        </div>
-
-        <div class="node n2">
-            02
-        </div>
-
-        <div class="node n3">
-            03
-        </div>
-
-        <div class="core">
-
-            <div>
-                <span>AI</span>
-                <small>
-                    LEARNING<br>
-                    SYSTEM
-                </small>
+            <div class="core-photo">
+                <img src="assets/images/photo.jpg"
+                     alt="Vidyashree M">
             </div>
 
+            <span class="core-label">VM</span>
+
         </div>
 
-        <div class="visual-label label-one">
-            <b>DATA</b>
-            <span>Structured Information</span>
+
+        <div class="data-node node-one">
+            <b>01</b>
+            <span>DATA</span>
+            <small>Structured Information</small>
         </div>
 
-        <div class="visual-label label-two">
-            <b>AI</b>
-            <span>Learning Patterns</span>
+        <div class="data-node node-two">
+            <b>02</b>
+            <span>AI</span>
+            <small>Learning Patterns</small>
         </div>
 
-        <div class="visual-label label-three">
-            <b>INSIGHT</b>
-            <span>Intelligent Decisions</span>
+        <div class="data-node node-three">
+            <b>03</b>
+            <span>INSIGHT</span>
+            <small>Intelligent Decisions</small>
         </div>
 
-        <div class="coord">
-            12.9716° N<br>
-            76.5946° E
+        <div class="coordinate">
+            12.2958° N<br>
+            76.6394° E
         </div>
 
     </div>
@@ -172,35 +179,40 @@
 </section>
 
 
-<!-- ================= TICKER ================= -->
+<!-- =====================================================
+     TICKER
+===================================================== -->
 
 <div class="ticker">
+
     <div>
-        PYTHON &nbsp;—&nbsp;
-        DATA SCIENCE &nbsp;—&nbsp;
-        ARTIFICIAL INTELLIGENCE &nbsp;—&nbsp;
-        MACHINE LEARNING &nbsp;—&nbsp;
-        COMPUTER VISION &nbsp;—&nbsp;
-        AUTOMATION &nbsp;—&nbsp;
-        PYTHON &nbsp;—&nbsp;
-        DATA SCIENCE &nbsp;—&nbsp;
-        ARTIFICIAL INTELLIGENCE &nbsp;—&nbsp;
-        MACHINE LEARNING &nbsp;—&nbsp;
-        COMPUTER VISION &nbsp;—&nbsp;
-        AUTOMATION &nbsp;—&nbsp;
+        PYTHON&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        DATA SCIENCE&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        ARTIFICIAL INTELLIGENCE&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        MACHINE LEARNING&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        COMPUTER VISION&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        DATA ANALYTICS&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        PYTHON&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        DATA SCIENCE&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        ARTIFICIAL INTELLIGENCE&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        MACHINE LEARNING&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
     </div>
+
 </div>
 
 
-<!-- ================= WORK ================= -->
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
 
-<section class="section-pad work" id="work">
+<section class="projects section-pad" id="work">
 
     <div class="section-head">
 
         <div>
             <div class="eyebrow">
-                03 / PROJECTS
+                <span>03</span>
+                PROJECTS
             </div>
 
             <h2>
@@ -209,8 +221,8 @@
         </div>
 
         <p class="section-note">
-            Explore my projects by technology,
-            domain and development focus.
+            Explore projects by technology, domain
+            and development focus.
         </p>
 
     </div>
@@ -218,37 +230,37 @@
 
     <!-- FILTERS -->
 
-    <div class="filters">
+    <div class="project-filters">
 
-        <button class="filter active" data-filter="all">
+        <button class="filter-btn active" data-filter="all">
             ALL
         </button>
 
-        <button class="filter" data-filter="python">
+        <button class="filter-btn" data-filter="python">
             PYTHON
         </button>
 
-        <button class="filter" data-filter="c">
+        <button class="filter-btn" data-filter="c">
             C
         </button>
 
-        <button class="filter" data-filter="ai">
+        <button class="filter-btn" data-filter="ai">
             AI / ML
         </button>
 
-        <button class="filter" data-filter="web">
+        <button class="filter-btn" data-filter="web">
             WEB
         </button>
 
-        <button class="filter" data-filter="data">
+        <button class="filter-btn" data-filter="data">
             DATA
         </button>
 
-        <button class="filter" data-filter="automation">
+        <button class="filter-btn" data-filter="automation">
             AUTOMATION
         </button>
 
-        <button class="filter" data-filter="other">
+        <button class="filter-btn" data-filter="other">
             OTHER
         </button>
 
@@ -257,22 +269,286 @@
 
     <!-- PROJECT GRID -->
 
-    <div class="project-grid">
+    <div class="project-grid" id="projectGrid">
 
 
-        <!-- PYTHON BANKIT -->
+        <!-- Python BankIt -->
 
-        <article
-            class="project project-card"
-            data-category="python other"
-        >
+        <article class="project-card reveal"
+                 data-category="python">
 
-            <div class="project-top">
-                <span>01 / PYTHON</span>
-                <span>COMPLETED</span>
+            <div class="project-number">
+                01 / PYTHON
             </div>
 
-            <div class="project-visual bankit-visual">
+            <div class="project-visual python-visual">
+                <span class="visual-code">PY</span>
+                <span class="visual-symbol">01</span>
+            </div>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    <span>PYTHON</span>
+                    <span class="completed">COMPLETED</span>
+                </div>
+
+                <h3>Python BankIt</h3>
+
+                <p>
+                    A Python-based banking application developed
+                    to implement core banking operations and
+                    transaction-oriented functionality.
+                </p>
+
+                <a href="https://github.com/vidyashreem46/python_bankit"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Library Management -->
+
+        <article class="project-card reveal"
+                 data-category="c">
+
+            <div class="project-number">
+                02 / C
+            </div>
+
+            <div class="project-visual c-visual">
+                <span class="visual-code">C</span>
+                <span class="visual-symbol">{ }</span>
+            </div>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    <span>C</span>
+                    <span class="completed">COMPLETED</span>
+                </div>
+
+                <h3>Library Management System</h3>
+
+                <p>
+                    A C-based management application focused on
+                    organizing library records and implementing
+                    fundamental programming concepts.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Matrix Operations -->
+
+        <article class="project-card reveal"
+                 data-category="c">
+
+            <div class="project-number">
+                03 / C
+            </div>
+
+            <div class="project-visual matrix-visual">
+                <div class="matrix-grid">
+                    <span>1</span><span>0</span><span>1</span>
+                    <span>0</span><span>1</span><span>0</span>
+                    <span>1</span><span>1</span><span>0</span>
+                </div>
+            </div>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    <span>C</span>
+                    <span class="completed">COMPLETED</span>
+                </div>
+
+                <h3>Matrix Operations in C</h3>
+
+                <p>
+                    A C programming project implementing
+                    fundamental matrix operations and
+                    computational logic.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Student Management -->
+
+        <article class="project-card reveal"
+                 data-category="c">
+
+            <div class="project-number">
+                04 / C
+            </div>
+
+            <div class="project-visual student-visual">
+                <span>STUDENT</span>
+                <b>SYS</b>
+            </div>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    <span>C</span>
+                    <span class="completed">COMPLETED</span>
+                </div>
+
+                <h3>Student Management System</h3>
+
+                <p>
+                    A C-based application for managing student
+                    information using structured programming
+                    and data handling concepts.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- AI Chatbot Benchmarking -->
+
+        <article class="project-card reveal featured-project"
+                 data-category="ai web data">
+
+            <div class="project-number">
+                05 / AI • DATA • WEB
+            </div>
+
+            <div class="project-visual benchmark-visual">
+
+                <div class="benchmark-bars">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+
+                <span>AI</span>
+
+            </div>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    <span>AI / ML</span>
+                    <span>DATA</span>
+                    <span>WEB</span>
+                </div>
+
+                <h3>AI Chatbot Benchmarking Tool</h3>
+
+                <p>
+                    A benchmarking platform designed to compare
+                    AI chatbot responses using dimensions such as
+                    correctness, creativity, speed and reliability.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Candlestick -->
+
+        <article class="project-card reveal"
+                 data-category="python ai data">
+
+            <div class="project-number">
+                06 / DATA • AI
+            </div>
+
+            <div class="project-visual candle-visual">
+
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+
+                <span>CANDLESTICK</span>
+
+            </div>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    <span>PYTHON</span>
+                    <span>DATA</span>
+                    <span>AI / ML</span>
+                </div>
+
+                <h3>Candlestick Pattern Detection</h3>
+
+                <p>
+                    A stock-market data analysis project exploring
+                    OHLC data and identifying candlestick patterns
+                    using Python and data analysis techniques.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- UUCMS -->
+
+        <article class="project-card reveal"
+                 data-category="python automation">
+
+            <div class="project-number">
+                07 / AUTOMATION
+            </div>
+
+            <div class="project-visual automation-visual">
 
                 <div class="terminal-window">
 
@@ -282,483 +558,175 @@
                         <span></span>
                     </div>
 
-                    <div class="terminal-code">
-                        <p>&gt; python bankit.py</p>
-                        <p>Initializing account...</p>
-                        <p class="success">● SYSTEM READY</p>
-                    </div>
+                    <code>
+                        &gt; automate()<br>
+                        &gt; result = fetched<br>
+                        &gt; status: success
+                    </code>
 
                 </div>
 
             </div>
 
-            <h3>Python BankIt</h3>
+            <div class="project-info">
 
-            <p>
-                A Python-based banking application developed
-                to implement practical banking operations
-                and programming concepts.
-            </p>
+                <div class="project-meta">
+                    <span>PYTHON</span>
+                    <span>AUTOMATION</span>
+                </div>
 
-            <div class="tags">
-                <span>Python</span>
-                <span>Programming</span>
+                <h3>UUCMS Result Automation</h3>
+
+                <p>
+                    An automation project created to streamline
+                    result-related tasks using browser automation
+                    and Python-based tools.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
             </div>
-
-            <a
-                href="https://github.com/vidyashreem46/python_bankit"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
 
         </article>
 
 
-        <!-- LIBRARY -->
+        <!-- CodeAlpha Calculator -->
 
-        <article
-            class="project project-card"
-            data-category="c other"
-        >
+        <article class="project-card reveal"
+                 data-category="python other">
 
-            <div class="project-top">
-                <span>02 / C</span>
-                <span>COMPLETED</span>
-            </div>
-
-            <div class="project-visual library-visual">
-                <span class="visual-number">C</span>
-                <div class="book-lines"></div>
-                <small>LIBRARY / SYSTEM</small>
-            </div>
-
-            <h3>Library Management System</h3>
-
-            <p>
-                A C-based project focused on managing
-                library records and implementing structured
-                programming concepts.
-            </p>
-
-            <div class="tags">
-                <span>C</span>
-                <span>Management System</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashreem46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
-
-        </article>
-
-
-        <!-- MATRIX -->
-
-        <article
-            class="project project-card"
-            data-category="c"
-        >
-
-            <div class="project-top">
-                <span>03 / C</span>
-                <span>COMPLETED</span>
-            </div>
-
-            <div class="project-visual matrix-visual">
-
-                <div class="matrix">
-                    <span>[ 1  2  3 ]</span>
-                    <span>[ 4  5  6 ]</span>
-                    <span>[ 7  8  9 ]</span>
-                </div>
-
-            </div>
-
-            <h3>Matrix Operations in C</h3>
-
-            <p>
-                A C programming project implementing
-                matrix-based operations and computational
-                logic.
-            </p>
-
-            <div class="tags">
-                <span>C</span>
-                <span>Algorithms</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashreem46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
-
-        </article>
-
-
-        <!-- STUDENT MANAGEMENT -->
-
-        <article
-            class="project project-card"
-            data-category="c other"
-        >
-
-            <div class="project-top">
-                <span>04 / C</span>
-                <span>COMPLETED</span>
-            </div>
-
-            <div class="project-visual student-visual">
-
-                <div class="student-box">
-                    <span>STUDENT</span>
-                    <strong>01</strong>
-                    <span>RECORD</span>
-                </div>
-
-            </div>
-
-            <h3>Student Management System</h3>
-
-            <p>
-                A C-based management application designed
-                around student records and structured data
-                handling.
-            </p>
-
-            <div class="tags">
-                <span>C</span>
-                <span>Data Handling</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
-
-        </article>
-
-
-        <!-- CHATBOT BENCHMARK -->
-
-        <article
-            class="project project-card featured-project"
-            data-category="python ai web data"
-        >
-
-            <div class="project-top">
-                <span>05 / AI · DATA · WEB</span>
-                <span>COMPLETED</span>
-            </div>
-
-            <div class="project-visual benchmark-visual">
-
-                <div class="benchmark-title">
-                    AI
-                </div>
-
-                <div class="benchmark-bars">
-                    <i style="height:45%"></i>
-                    <i style="height:78%"></i>
-                    <i style="height:62%"></i>
-                    <i style="height:90%"></i>
-                    <i style="height:70%"></i>
-                </div>
-
-                <div class="benchmark-label">
-                    RESPONSE / EVALUATION
-                </div>
-
-            </div>
-
-            <h3>AI Chatbot Benchmarking Tool</h3>
-
-            <p>
-                A project designed to compare AI chatbot
-                responses using factors such as correctness,
-                creativity, speed and hallucination.
-            </p>
-
-            <div class="tags">
-                <span>AI / ML</span>
-                <span>Python</span>
-                <span>Django</span>
-                <span>Data</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
-
-        </article>
-
-
-        <!-- CANDLESTICK -->
-
-        <article
-            class="project project-card"
-            data-category="python data ai"
-        >
-
-            <div class="project-top">
-                <span>06 / DATA</span>
-                <span>IN DEVELOPMENT</span>
-            </div>
-
-            <div class="project-visual candle-visual">
-
-                <div class="candles">
-
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
-
-                </div>
-
-                <span class="chart-label">
-                    MARKET / PATTERN ANALYSIS
-                </span>
-
-            </div>
-
-            <h3>Candlestick Pattern Detection</h3>
-
-            <p>
-                A data-focused project exploring stock
-                market candlestick patterns using Python,
-                OHLC data and analytical techniques.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>Data</span>
-                <span>Analysis</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
-
-        </article>
-
-
-        <!-- UUCMS -->
-
-        <article
-            class="project project-card"
-            data-category="python automation"
-        >
-
-            <div class="project-top">
-                <span>07 / AUTOMATION</span>
-                <span>COMPLETED</span>
-            </div>
-
-            <div class="project-visual automation-visual">
-
-                <div class="automation-screen">
-
-                    <span>UUCMS</span>
-
-                    <div class="loading-line"></div>
-
-                    <small>
-                        AUTOMATED WORKFLOW
-                    </small>
-
-                </div>
-
-            </div>
-
-            <h3>UUCMS Result Automation</h3>
-
-            <p>
-                An automation project using Python and
-                browser automation techniques to work with
-                the UUCMS result workflow.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>Selenium</span>
-                <span>Automation</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
-
-        </article>
-
-
-        <!-- CODEALPHA -->
-
-        <article
-            class="project project-card"
-            data-category="python other"
-        >
-
-            <div class="project-top">
-                <span>08 / CODEALPHA</span>
-                <span>COMPLETED</span>
+            <div class="project-number">
+                08 / CODEALPHA
             </div>
 
             <div class="project-visual calculator-visual">
 
                 <div class="calculator">
-                    <div>CODEALPHA</div>
-                    <strong>01 + 02 = 03</strong>
+                    <span>+</span>
+                    <span>−</span>
+                    <span>×</span>
+                    <span>÷</span>
                 </div>
 
             </div>
 
-            <h3>CodeAlpha Calculator Program</h3>
+            <div class="project-info">
 
-            <p>
-                A calculator program developed as part of
-                my CodeAlpha virtual internship experience.
-            </p>
+                <div class="project-meta">
+                    <span>PYTHON</span>
+                    <span>OTHER</span>
+                    <span>CODEALPHA</span>
+                </div>
 
-            <div class="tags">
-                <span>Python</span>
-                <span>CodeAlpha</span>
+                <h3>CodeAlpha Calculator Program</h3>
+
+                <p>
+                    A programming project completed as part of
+                    the CodeAlpha virtual internship experience.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    VIEW ON GITHUB →
+                </a>
+
             </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
 
         </article>
 
 
-        <!-- QUIZ MASTER -->
+        <!-- Quiz Master -->
 
-        <article
-            class="project project-card"
-            data-category="python web"
-        >
+        <article class="project-card reveal in-progress-card"
+                 data-category="python web ai">
 
-            <div class="project-top">
-                <span>09 / WEB</span>
-                <span>IN PROGRESS</span>
+            <div class="project-number">
+                09 / IN PROGRESS
             </div>
 
             <div class="project-visual quiz-visual">
+                <span>?</span>
+                <small>QUIZ / MASTER</small>
+            </div>
 
-                <div class="quiz-interface">
+            <div class="project-info">
 
-                    <span>QUIZ MASTER</span>
-
-                    <div class="quiz-option"></div>
-                    <div class="quiz-option"></div>
-                    <div class="quiz-option"></div>
-
+                <div class="project-meta">
+                    <span>PYTHON</span>
+                    <span>WEB</span>
+                    <span class="progress">IN PROGRESS</span>
                 </div>
 
+                <h3>Quiz Master Application</h3>
+
+                <p>
+                    A quiz application currently under development,
+                    focused on building an interactive learning
+                    experience with a Python-based web backend.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    FOLLOW PROJECT →
+                </a>
+
             </div>
-
-            <h3>Quiz Master Application</h3>
-
-            <p>
-                A quiz application currently being developed
-                with a focus on user interaction, quiz flow,
-                authentication and data handling.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>Flask</span>
-                <span>Web</span>
-            </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
 
         </article>
 
 
-        <!-- HAND GESTURE -->
+        <!-- Hand Gesture -->
 
-        <article
-            class="project project-card"
-            data-category="python ai"
-        >
+        <article class="project-card reveal in-progress-card"
+                 data-category="ai python">
 
-            <div class="project-top">
-                <span>10 / AI · COMPUTER VISION</span>
-                <span>STARTING</span>
+            <div class="project-number">
+                10 / IN PROGRESS
             </div>
 
             <div class="project-visual gesture-visual">
 
-                <div class="hand-symbol">
-                    ✋
-                </div>
+                <div class="gesture-hand">✋</div>
 
                 <div class="scan-line"></div>
 
-                <span>
-                    COMPUTER VISION / HAND TRACKING
-                </span>
+                <span>VISION SYSTEM</span>
 
             </div>
 
-            <h3>Hand Gesture Recognition</h3>
+            <div class="project-info">
 
-            <p>
-                A computer vision project currently being
-                started to explore hand gesture recognition
-                and intelligent visual interaction.
-            </p>
+                <div class="project-meta">
+                    <span>AI / ML</span>
+                    <span>PYTHON</span>
+                    <span class="progress">IN PROGRESS</span>
+                </div>
 
-            <div class="tags">
-                <span>AI / ML</span>
-                <span>Python</span>
-                <span>OpenCV</span>
+                <h3>Hand Gesture Recognition</h3>
+
+                <p>
+                    An AI/computer-vision project currently being
+                    started to explore recognition of hand gestures
+                    using image processing and machine learning.
+                </p>
+
+                <a href="https://github.com/vidyashreem46"
+                   target="_blank"
+                   rel="noopener"
+                   class="project-link">
+                    FOLLOW PROJECT →
+                </a>
+
             </div>
-
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-                class="project-link"
-            >
-                VIEW ON GITHUB →
-            </a>
 
         </article>
 
@@ -767,42 +735,51 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section class="about section-pad" id="about">
 
-    <div class="about-number">
-        04 / ABOUT
-    </div>
-
-    <div class="about-copy">
+    <div class="about-label">
 
         <div class="eyebrow">
-            WHO I AM
+            <span>04</span>
+            ABOUT
         </div>
 
+        <span class="about-number">VM / DS-AI</span>
+
+    </div>
+
+
+    <div class="about-content">
+
         <h2>
-            Learning.<br>
-            Building.<br>
-            <em>Improving.</em>
+            Learning by<br>
+            <em>building.</em>
         </h2>
 
         <p>
             I am Vidyashree M, a B.Sc. (Hons) Data Science &
-            Artificial Intelligence student from Mysuru.
+            Artificial Intelligence student at Sarada Vilas
+            College, Mysuru.
         </p>
 
         <p>
-            My learning journey is focused on Python,
-            data analysis, AI/ML, computer vision,
-            automation and practical software projects.
+            My work combines Python, C, SQL, data analysis,
+            machine learning, automation and computer vision.
+            I enjoy turning concepts learned in class into
+            practical projects.
         </p>
 
         <p>
-            Rather than only learning concepts theoretically,
-            I enjoy turning them into working projects and
-            gradually improving them through experimentation.
+            I am currently developing my skills through
+            hands-on projects and seeking internship opportunities
+            where I can learn, contribute and gain practical
+            industry experience.
         </p>
+
 
         <div class="facts">
 
@@ -828,15 +805,18 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
+<!-- =====================================================
+     SKILLS
+===================================================== -->
 
-<section class="section-pad skills-section" id="skills">
+<section class="skills section-pad">
 
     <div class="section-head">
 
         <div>
             <div class="eyebrow">
-                05 / CAPABILITIES
+                <span>05</span>
+                SKILLS
             </div>
 
             <h2>
@@ -851,15 +831,16 @@
 
         <div class="skill-column">
 
-            <span>01</span>
+            <span>01 / PROGRAMMING</span>
 
-            <h3>PROGRAMMING</h3>
+            <h3>Core</h3>
 
-            <div class="skill-list">
+            <div class="skill-tags">
                 <span>Python</span>
                 <span>C</span>
                 <span>SQL</span>
-                <span>JavaScript</span>
+                <span>Git</span>
+                <span>GitHub</span>
             </div>
 
         </div>
@@ -867,11 +848,11 @@
 
         <div class="skill-column">
 
-            <span>02</span>
+            <span>02 / DATA</span>
 
-            <h3>DATA</h3>
+            <h3>Data & Analytics</h3>
 
-            <div class="skill-list">
+            <div class="skill-tags">
                 <span>Pandas</span>
                 <span>NumPy</span>
                 <span>Matplotlib</span>
@@ -885,11 +866,11 @@
 
         <div class="skill-column">
 
-            <span>03</span>
+            <span>03 / AI</span>
 
             <h3>AI / ML</h3>
 
-            <div class="skill-list">
+            <div class="skill-tags">
                 <span>Machine Learning</span>
                 <span>Neural Networks</span>
                 <span>Generative AI</span>
@@ -902,18 +883,20 @@
 
         <div class="skill-column">
 
-            <span>04</span>
+            <span>04 / DEVELOPMENT</span>
 
-            <h3>TOOLS</h3>
+            <h3>Tools & Web</h3>
 
-            <div class="skill-list">
+            <div class="skill-tags">
                 <span>Scikit-learn</span>
                 <span>OpenCV</span>
                 <span>EasyOCR</span>
-                <span>Tesseract OCR</span>
+                <span>Tesseract</span>
                 <span>Flask</span>
                 <span>Django</span>
-                <span>Git / GitHub</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
             </div>
 
         </div>
@@ -923,54 +906,60 @@
 </section>
 
 
-<!-- ================= EDUCATION ================= -->
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
 
 <section class="education section-pad">
 
     <div class="edu-label">
 
         <div class="eyebrow">
-            06 / EDUCATION
+            <span>06</span>
+            EDUCATION
         </div>
 
-        <span>DS</span>
+        <span class="edu-year">03</span>
 
     </div>
+
 
     <div class="edu-main">
 
         <h2>
             B.Sc. (Hons)<br>
-            Data Science &<br>
-            Artificial Intelligence
+            Data Science & AI
         </h2>
 
         <p>
             SARADA VILAS COLLEGE · MYSURU · UNIVERSITY OF MYSORE
         </p>
 
-        <p>
-            CURRENTLY 3RD YEAR / 5TH SEMESTER
-        </p>
+        <div class="education-status">
+            CURRENTLY — 3RD YEAR / 5TH SEMESTER
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
 
-<section class="section-pad experience" id="experience">
+<section class="experience section-pad" id="experience">
 
     <div class="section-head">
 
         <div>
             <div class="eyebrow">
-                07 / EXPERIENCE
+                <span>07</span>
+                EXPERIENCE
             </div>
 
             <h2>
-                Virtual <em>internship.</em>
+                Practical <em>exposure.</em>
             </h2>
         </div>
 
@@ -979,28 +968,30 @@
 
     <div class="experience-card">
 
-        <div class="experience-number">
+        <div class="experience-index">
             01
         </div>
 
-        <div>
+        <div class="experience-main">
 
             <div class="experience-meta">
-                VIRTUAL INTERNSHIP · COMPLETED
+                VIRTUAL INTERNSHIP
+                <span>COMPLETED</span>
             </div>
 
             <h3>CodeAlpha</h3>
 
             <p>
-                Completed a virtual internship with CodeAlpha,
-                gaining practical project experience through
-                programming-oriented tasks.
+                Completed a virtual internship experience with
+                CodeAlpha, working on practical programming and
+                project-based tasks.
             </p>
 
         </div>
 
-        <div class="experience-status">
-            COMPLETED
+        <div class="experience-side">
+            CODE<br>
+            ALPHA
         </div>
 
     </div>
@@ -1008,51 +999,59 @@
 </section>
 
 
-<!-- ================= CURRENT STATUS ================= -->
+<!-- =====================================================
+     CURRENT STATUS
+===================================================== -->
 
-<section class="status-section section-pad">
+<section class="current-status section-pad">
 
-    <div class="status-large">
+    <div class="status-box">
 
-        <span class="pulse"></span>
+        <div class="eyebrow">
+            CURRENT STATUS
+        </div>
 
-        CURRENT STATUS
+        <h2>
+            Seeking Internship<br>
+            <em>Opportunities.</em>
+        </h2>
+
+        <p>
+            Interested in opportunities related to Data Science,
+            Artificial Intelligence, Machine Learning, Python
+            and Data Analytics.
+        </p>
+
+        <a href="mailto:dreamtrail06@gmail.com"
+           class="btn btn-primary">
+            LET'S CONNECT →
+        </a>
 
     </div>
-
-    <h2>
-        SEEKING INTERNSHIP<br>
-        <em>OPPORTUNITIES.</em>
-    </h2>
-
-    <p>
-        Interested in opportunities involving Data Science,
-        Artificial Intelligence, Machine Learning, Python
-        and Data Analytics.
-    </p>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section class="contact section-pad" id="contact">
 
     <div>
 
         <div class="eyebrow">
-            08 / CONTACT
+            <span>08</span>
+            CONTACT
         </div>
 
         <h2>
             Let's build<br>
-            something <em>useful.</em>
+            <em>something useful.</em>
         </h2>
 
-        <a
-            href="mailto:dreamtrail06@gmail.com"
-            class="mail"
-        >
+        <a href="mailto:dreamtrail06@gmail.com"
+           class="mail">
             dreamtrail06@gmail.com
         </a>
 
@@ -1061,33 +1060,25 @@
 
     <div class="contact-bottom">
 
-        <span>
-            VIDYASHREE M · MYSURU, INDIA
-        </span>
-
         <div>
 
-            <a
-                href="https://github.com/vidyashree46"
-                target="_blank"
-            >
-                GITHUB
+            <a href="https://www.linkedin.com/in/vidyashree-m-98a7641b7/"
+               target="_blank"
+               rel="noopener">
+                LINKEDIN ↗
             </a>
 
-            <a
-                href="https://www.linkedin.com/in/vidyashree-m-98a7641b7"
-                target="_blank"
-            >
-                LINKEDIN
-            </a>
-
-            <a
-                href="mailto:dreamtrail06@gmail.com"
-            >
-                EMAIL
+            <a href="https://github.com/vidyashreem46"
+               target="_blank"
+               rel="noopener">
+                GITHUB ↗
             </a>
 
         </div>
+
+        <span>
+            © 2026 VIDYASHREE M
+        </span>
 
     </div>
 
@@ -1096,7 +1087,9 @@
 </main>
 
 
-<button class="top-btn" id="topBtn">
+<!-- BACK TO TOP -->
+
+<button class="top-btn" id="topBtn" aria-label="Back to top">
     ↑
 </button>
 
