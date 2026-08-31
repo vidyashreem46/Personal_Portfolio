@@ -4,74 +4,32 @@
 
 
 /* =========================================================
-   PROJECT FILTER
+   MOBILE MENU
 ========================================================= */
 
-const filterButtons =
-    document.querySelectorAll(".filter-btn");
+const menuButton = document.querySelector(".menu-button");
+const mobileNav = document.querySelector(".mobile-nav");
 
-const projectCards =
-    document.querySelectorAll(".project-card");
+if (menuButton) {
 
+    menuButton.addEventListener("click", () => {
 
-filterButtons.forEach(button => {
+        mobileNav.classList.toggle("open");
 
-    button.addEventListener("click", () => {
+    });
 
-        const selectedFilter =
-            button.dataset.filter;
-
-
-        /* Active button */
-
-        filterButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-        button.classList.add("active");
+}
 
 
-        /* Filter projects */
+/* Close mobile menu after clicking */
 
-        projectCards.forEach(card => {
+const mobileLinks = document.querySelectorAll(".mobile-nav a");
 
-            const categories =
-                card.dataset.category
-                    .toLowerCase()
-                    .split(" ");
+mobileLinks.forEach(link => {
 
+    link.addEventListener("click", () => {
 
-            const shouldShow =
-                selectedFilter === "all" ||
-                categories.includes(selectedFilter);
-
-
-            if (shouldShow) {
-
-                card.classList.remove("hidden");
-
-                card.style.opacity = "0";
-                card.style.transform =
-                    "translateY(12px)";
-
-
-                requestAnimationFrame(() => {
-
-                    card.style.opacity = "1";
-                    card.style.transform =
-                        "translateY(0)";
-
-                });
-
-            } else {
-
-                card.classList.add("hidden");
-
-            }
-
-        });
+        mobileNav.classList.remove("open");
 
     });
 
@@ -79,44 +37,57 @@ filterButtons.forEach(button => {
 
 
 /* =========================================================
-   MOBILE MENU
+   PROJECT FILTER
 ========================================================= */
 
-const mobileMenuButton =
-    document.querySelector(".mobile-menu-btn");
+const filterButtons =
+    document.querySelectorAll(".filters button");
 
-const mobileMenu =
-    document.querySelector(".mobile-menu");
-
-
-mobileMenuButton.addEventListener("click", () => {
-
-    mobileMenu.classList.toggle("open");
-
-    document.body.classList.toggle(
-        "menu-open"
-    );
-
-});
+const projects =
+    document.querySelectorAll(".project");
 
 
-/* Close menu after clicking */
+filterButtons.forEach(button => {
 
-const mobileLinks =
-    document.querySelectorAll(
-        ".mobile-menu a"
-    );
+    button.addEventListener("click", () => {
+
+        /* Remove active state */
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+        /* Add active state */
+
+        button.classList.add("active");
 
 
-mobileLinks.forEach(link => {
+        const selectedFilter =
+            button.dataset.filter;
 
-    link.addEventListener("click", () => {
 
-        mobileMenu.classList.remove("open");
+        projects.forEach(project => {
 
-        document.body.classList.remove(
-            "menu-open"
-        );
+            const categories =
+                project.dataset.category.split(" ");
+
+
+            if (
+                selectedFilter === "all" ||
+                categories.includes(selectedFilter)
+            ) {
+
+                project.classList.remove("hidden");
+
+            } else {
+
+                project.classList.add("hidden");
+
+            }
+
+        });
 
     });
 
@@ -133,15 +104,14 @@ const revealElements =
 
 const revealObserver =
     new IntersectionObserver(
+
         entries => {
 
             entries.forEach(entry => {
 
                 if (entry.isIntersecting) {
 
-                    entry.target.classList.add(
-                        "visible"
-                    );
+                    entry.target.classList.add("show");
 
                     revealObserver.unobserve(
                         entry.target
@@ -152,9 +122,11 @@ const revealObserver =
             });
 
         },
+
         {
             threshold: 0.12
         }
+
     );
 
 
@@ -166,282 +138,79 @@ revealElements.forEach(element => {
 
 
 /* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
-
-const sections =
-    document.querySelectorAll(
-        "section[id]"
-    );
-
-const navLinks =
-    document.querySelectorAll(
-        ".desktop-nav a"
-    );
-
-
-const sectionObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (!entry.isIntersecting) {
-                    return;
-                }
-
-
-                const currentId =
-                    entry.target.id;
-
-
-                navLinks.forEach(link => {
-
-                    const linkTarget =
-                        link.getAttribute("href")
-                            .replace("#", "");
-
-
-                    if (linkTarget === currentId) {
-
-                        link.classList.add(
-                            "active"
-                        );
-
-                    } else {
-
-                        link.classList.remove(
-                            "active"
-                        );
-
-                    }
-
-                });
-
-            });
-
-        },
-        {
-            threshold: 0.35
-        }
-    );
-
-
-sections.forEach(section => {
-
-    sectionObserver.observe(section);
-
-});
-
-
-/* =========================================================
    BACK TO TOP
 ========================================================= */
 
-const backTop =
-    document.getElementById("backTop");
+const backToTop =
+    document.getElementById("backToTop");
 
 
-window.addEventListener(
-    "scroll",
-    () => {
+window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 600) {
+    if (window.scrollY > 600) {
 
-            backTop.classList.add("show");
+        backToTop.classList.add("visible");
 
-        } else {
+    } else {
 
-            backTop.classList.remove("show");
-
-        }
+        backToTop.classList.remove("visible");
 
     }
-);
+
+});
 
 
-backTop.addEventListener(
-    "click",
-    () => {
+backToTop.addEventListener("click", () => {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+    window.scrollTo({
 
-    }
-);
+        top: 0,
 
+        behavior: "smooth"
 
-/* =========================================================
-   MOUSE BACKGROUND INTERACTION
-========================================================= */
-
-const glowOne =
-    document.querySelector(".glow-one");
-
-const glowTwo =
-    document.querySelector(".glow-two");
-
-
-window.addEventListener(
-    "mousemove",
-    event => {
-
-        const x =
-            (event.clientX /
-                window.innerWidth -
-                0.5) * 30;
-
-        const y =
-            (event.clientY /
-                window.innerHeight -
-                0.5) * 30;
-
-
-        glowOne.style.transform =
-            `translate(${x}px, ${y}px)`;
-
-
-        glowTwo.style.transform =
-            `translate(${-x}px, ${-y}px)`;
-
-    }
-);
-
-
-/* =========================================================
-   PROJECT HOVER DEPTH
-========================================================= */
-
-projectCards.forEach(card => {
-
-    card.addEventListener(
-        "mousemove",
-        event => {
-
-            const rect =
-                card.getBoundingClientRect();
-
-
-            const x =
-                event.clientX -
-                rect.left;
-
-
-            const y =
-                event.clientY -
-                rect.top;
-
-
-            const centerX =
-                rect.width / 2;
-
-
-            const centerY =
-                rect.height / 2;
-
-
-            const rotateX =
-                ((y - centerY) /
-                    centerY) * -1.2;
-
-
-            const rotateY =
-                ((x - centerX) /
-                    centerX) * 1.2;
-
-
-            card.style.transform =
-                `perspective(800px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)
-                 translateY(-3px)`;
-
-        }
-    );
-
-
-    card.addEventListener(
-        "mouseleave",
-        () => {
-
-            card.style.transform =
-                "translateY(0)";
-
-        }
-    );
+    });
 
 });
 
 
 /* =========================================================
-   YEAR
+   CURRENT YEAR
 ========================================================= */
 
 const year =
     document.getElementById("year");
 
 
-year.textContent =
-    new Date().getFullYear();
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
+
+}
 
 
 /* =========================================================
-   SMOOTH INTERNAL LINKS
+   SUBTLE HERO PARALLAX
 ========================================================= */
 
-document.querySelectorAll(
-    'a[href^="#"]'
-).forEach(link => {
-
-    link.addEventListener(
-        "click",
-        event => {
-
-            const targetId =
-                link.getAttribute("href");
+const heroArt =
+    document.querySelector(".hero-art");
 
 
-            if (targetId === "#") {
-                return;
-            }
+if (heroArt) {
+
+    window.addEventListener("mousemove", event => {
+
+        const x =
+            (event.clientX / window.innerWidth - 0.5) * 10;
+
+        const y =
+            (event.clientY / window.innerHeight - 0.5) * 10;
 
 
-            const target =
-                document.querySelector(targetId);
+        heroArt.style.transform =
+            `translate(${x}px, ${y}px)`;
 
+    });
 
-            if (!target) {
-                return;
-            }
-
-
-            event.preventDefault();
-
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-    );
-
-});
-
-
-/* =========================================================
-   INITIAL LOAD
-========================================================= */
-
-window.addEventListener(
-    "load",
-    () => {
-
-        document.body.classList.add(
-            "page-loaded"
-        );
-
-    }
-);
+}
